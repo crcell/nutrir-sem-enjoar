@@ -4,343 +4,476 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nutrir Sem Enjoar — O Guia Que Deveria Ter Vindo Com a Sua Caneta</title>
-<meta name="description" content="O protocolo alimentar para quem usa caneta emagrecedora. Aprenda a comer sem enjoo, sem tontura e sem medo. +1.200 mulheres já estão usando.">
+<meta name="description" content="O protocolo alimentar para quem usa caneta emagrecedora. +1.200 mulheres já estão usando.">
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','795163796539514');fbq('track','PageView');</script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=795163796539514&ev=PageView&noscript=1"/></noscript>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --g1:#0A7A40;--g2:#0FA858;--teal:#00BFA5;--teal2:#00E5CC;
-  --lime:#84CC16;--mint:#6EE7B7;
-  --purple:#6C3FC5;--orange:#F97316;--orange2:#FF8C00;--orange3:#FBBF24;
-  --red:#E53935;--gold:#F59E0B;--yellow:#FCD34D;
-  --dark:#07160D;--dark2:#0D2318;--dark3:#1A3A26;
-  --white:#FFFFFF;--off:#E4F2E9;--off2:#EBF5EE;--bg:#EBF5EE;
-  --muted:#5A8A6A;--border:rgba(10,122,64,0.18);
-  --font-display:'Playfair Display',Georgia,serif;
-  --font-body:'Nunito',sans-serif;
+  --green:#0A7A40;--green2:#0FA858;--green3:#0D5C31;
+  --teal:#00BFA5;--teal2:#00E5CC;--teal3:#009E8A;
+  --orange:#F97316;--orange2:#FF8C00;
+  --dark:#1A2920;--dark2:#0D2318;
+  --gray:#6B7280;--gray2:#9CA3AF;
+  --white:#FFFFFF;--bg:#F8FFFE;--light:#F0FAF4;
+  --border:#D1FAE5;--border2:#A7F3D0;
+  --font:'Open Sans',sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:var(--font-body);background:var(--bg);color:var(--dark);overflow-x:hidden;}
+body{font-family:var(--font);background:var(--bg);color:var(--dark);overflow-x:hidden;}
 img{max-width:100%;display:block;}
 a{text-decoration:none;color:inherit;}
-.container{max-width:900px;margin:0 auto;padding:0 24px;}
-.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;border-radius:40px;padding:7px 18px;}
-.tag-white{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.35);color:#fff;}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-body);font-weight:900;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s;text-align:center;}
-.btn-primary{background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;font-size:19px;padding:22px 48px;border-radius:60px;box-shadow:0 10px 40px rgba(249,115,22,0.45);letter-spacing:0.2px;animation:pulse-cta 2.5s infinite;}
-.btn-primary:hover{transform:translateY(-3px);}
-.btn-primary.large{font-size:22px;padding:26px 56px;}
-@keyframes pulse-cta{0%,100%{box-shadow:0 10px 40px rgba(249,115,22,0.45),0 0 0 0 rgba(249,115,22,0.4);}60%{box-shadow:0 10px 40px rgba(249,115,22,0.45),0 0 0 14px rgba(249,115,22,0);}}
-#urgency-bar{position:sticky;top:0;z-index:100;background:linear-gradient(90deg,#B71C1C,var(--red),#C62828);padding:13px 24px;text-align:center;border-bottom:2px solid rgba(255,255,255,0.15);}
-#urgency-bar p{color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;}
-#urgency-bar .fire{font-size:18px;animation:flicker 1.5s infinite alternate;}
-@keyframes flicker{from{opacity:1;}to{opacity:0.7;};}
-#urgency-bar span.pill{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);border-radius:20px;padding:4px 14px;}
-#countdown{font-size:20px;font-weight:900;color:var(--yellow);font-variant-numeric:tabular-nums;background:rgba(0,0,0,0.25);border-radius:8px;padding:2px 10px;}
-.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1400&h=900&fit=crop&auto=format') center/cover no-repeat;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(145deg,rgba(7,22,13,0.97) 0%,rgba(10,90,45,0.92) 40%,rgba(0,120,100,0.75) 70%,rgba(0,191,165,0.55) 100%);}
-.hero .container{position:relative;z-index:2;padding-top:70px;padding-bottom:70px;}
-.hero-content{max-width:680px;}
-.hero-eyebrow{margin-bottom:24px;}
-.hero h1{font-family:var(--font-display);font-size:clamp(38px,5.8vw,68px);font-weight:900;color:#fff;line-height:1.08;margin-bottom:28px;text-shadow:0 2px 20px rgba(0,0,0,0.4);}
-.hero h1 em{font-style:italic;color:var(--teal2);}
-.hero-sub{font-size:18px;color:rgba(255,255,255,0.85);line-height:1.7;max-width:580px;margin-bottom:36px;}
-.hero-sub strong{color:#fff;font-weight:800;}
-.hero-sub .mech{display:inline-block;background:linear-gradient(90deg,rgba(0,229,204,0.25),rgba(0,191,165,0.15));border:1px solid rgba(0,229,204,0.4);border-radius:6px;padding:0 8px;color:var(--teal2);font-weight:800;}
-.hero-cta{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:44px;}
-.hero-microcopy{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,0.65);font-weight:700;flex-wrap:wrap;}
-.hero-microcopy span{display:inline-flex;align-items:center;gap:5px;}
-.hero-proof{display:inline-flex;align-items:center;gap:14px;background:rgba(255,255,255,0.1);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.22);border-radius:60px;padding:13px 24px;}
-.hero-proof .stars{color:var(--gold);font-size:18px;letter-spacing:1px;}
-.hero-proof p{color:#fff;font-size:14px;font-weight:700;}
-.hero-proof p span{color:var(--teal2);}
-.hero-visual{position:absolute;right:0;top:0;bottom:0;width:42%;display:flex;align-items:center;justify-content:flex-end;z-index:2;padding-right:40px;}
-.hero-card-stack{position:relative;width:320px;}
-.hero-main-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.25);border-radius:28px;padding:32px;text-align:center;color:#fff;}
-.hero-main-card .ebook-icon{font-size:76px;margin-bottom:16px;}
-.hero-main-card h3{font-family:var(--font-display);font-size:22px;font-weight:900;margin-bottom:8px;}
-.hero-main-card p{font-size:14px;color:rgba(255,255,255,0.72);}
-.hero-pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px;}
-.hero-pill{background:rgba(0,229,204,0.2);border:1px solid rgba(0,229,204,0.4);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:800;color:var(--teal2);}
-.hero-float-badge{position:absolute;bottom:-20px;right:-20px;background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;border-radius:20px;padding:16px 20px;font-weight:900;text-align:center;box-shadow:0 10px 28px rgba(249,115,22,0.45);}
-.hero-float-badge strong{display:block;font-size:30px;line-height:1;font-family:var(--font-display);}
-.hero-float-badge span{font-size:12px;opacity:0.88;}
-.proof-bar{background:linear-gradient(90deg,var(--dark),var(--dark2),var(--dark3),var(--dark2),var(--dark));padding:32px 0;}
-.proof-nums{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;}
-.proof-num{text-align:center;padding:0 44px;border-right:1px solid rgba(255,255,255,0.1);}
-.proof-num:last-child{border-right:none;}
-.proof-num strong{display:block;font-size:42px;font-weight:900;line-height:1.1;font-family:var(--font-display);}
-.proof-num:nth-child(1) strong{color:var(--teal2);}
-.proof-num:nth-child(2) strong{color:var(--orange3);}
-.proof-num:nth-child(3) strong{color:var(--mint);}
-.proof-num:nth-child(4) strong{color:var(--lime);}
-.proof-num span{font-size:13px;color:rgba(255,255,255,0.55);font-weight:600;margin-top:5px;display:block;}
-.section{padding:84px 0;}
-.section-off{background:var(--off);}
-.section-off2{background:var(--off2);}
-.section-green{background:linear-gradient(155deg,var(--dark2),var(--dark3),#0D2A1E);}
-.section-teal{background:linear-gradient(135deg,#062818,#0D2A20,#083020);}
-.section-label{font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal);margin-bottom:12px;}
-.section-title{font-family:var(--font-display);font-size:clamp(30px,4.2vw,48px);font-weight:900;color:var(--dark);line-height:1.1;margin-bottom:16px;}
-.section-title.white{color:#fff;}
-.section-title em{font-style:italic;color:var(--g1);}
-.section-title.white em{color:var(--teal2);}
-.section-sub{font-size:16px;color:var(--muted);line-height:1.75;max-width:600px;}
-.section-sub.white{color:rgba(255,255,255,0.72);}
-.text-center{text-align:center;}
-.mx-auto{margin-left:auto;margin-right:auto;}
-.diagonal-down{clip-path:polygon(0 0,100% 0,100% 88%,0 100%);padding-bottom:100px !important;}
-.diagonal-up{clip-path:polygon(0 12%,100% 0,100% 100%,0 100%);padding-top:100px !important;margin-top:-40px;}
-.villain-band{background:linear-gradient(135deg,#021A0A,#052A12,#031608);padding:56px 0;border-top:3px solid rgba(0,191,165,0.25);border-bottom:3px solid rgba(0,191,165,0.25);position:relative;overflow:hidden;}
-.villain-band::before{content:'';position:absolute;top:-80px;right:-60px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(0,191,165,0.1) 0%,transparent 70%);}
-.villain-quote{max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:1;padding:0 24px;}
-.villain-quote h2{font-family:var(--font-display);font-size:clamp(26px,3.8vw,44px);font-weight:900;color:#fff;line-height:1.15;margin-bottom:20px;}
-.villain-quote h2 em{font-style:italic;color:var(--teal2);}
-.villain-line{display:flex;align-items:center;gap:16px;justify-content:center;font-size:16px;color:rgba(255,255,255,0.55);font-weight:700;margin-bottom:10px;}
-.villain-line::before,.villain-line::after{content:'';flex:1;max-width:80px;height:1px;background:rgba(0,191,165,0.3);}
-.villain-items{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px;}
-.villain-item{background:rgba(0,191,165,0.1);border:1px solid rgba(0,191,165,0.25);border-radius:40px;padding:8px 20px;font-size:14px;font-weight:700;color:rgba(255,255,255,0.78);}
-.villain-item span{color:var(--teal2);}
-.pain-intro{max-width:680px;margin:0 auto 48px;font-size:18px;font-weight:700;color:var(--dark);line-height:1.75;font-style:italic;border-left:5px solid var(--teal);padding:22px 30px;background:linear-gradient(135deg,rgba(0,191,165,0.06),rgba(10,122,64,0.04));border-radius:0 18px 18px 0;}
-.pain-intro cite{display:block;font-size:13px;font-weight:800;color:var(--muted);font-style:normal;margin-top:12px;}
+.container{max-width:1100px;margin:0 auto;padding:0 28px;}
+.container-sm{max-width:860px;margin:0 auto;padding:0 28px;}
+
+/* ── URGENCY BAR ── */
+#urgency-bar{
+  background:linear-gradient(90deg,var(--dark2),var(--green3));
+  padding:11px 24px;text-align:center;
+}
+#urgency-bar p{color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;}
+#urgency-bar .pill{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.25);border-radius:20px;padding:3px 14px;}
+#countdown{color:var(--teal2);font-weight:800;font-size:16px;font-variant-numeric:tabular-nums;}
+
+/* ── NAV ── */
+.nav{background:var(--white);box-shadow:0 1px 0 var(--border);padding:0 28px;}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-logo{font-size:20px;font-weight:800;color:var(--green);}
+.nav-logo span{color:var(--teal);}
+.nav-links{display:flex;align-items:center;gap:28px;}
+.nav-link{font-size:14px;font-weight:600;color:var(--gray);transition:color .15s;}
+.nav-link:hover{color:var(--green);}
+.nav-cta{background:var(--green);color:#fff;font-size:14px;font-weight:700;padding:10px 24px;border-radius:8px;transition:background .15s;}
+.nav-cta:hover{background:var(--green3);}
+
+/* ── HERO ── */
+.hero{padding:48px 0 0;background:var(--bg);position:relative;overflow:hidden;}
+.hero-blob1{position:absolute;width:360px;height:360px;border-radius:50%;background:rgba(0,191,165,0.08);top:-80px;left:-80px;pointer-events:none;}
+.hero-blob2{position:absolute;width:280px;height:280px;border-radius:50%;background:rgba(10,122,64,0.07);bottom:60px;right:-60px;pointer-events:none;}
+.hero-card{
+  background:linear-gradient(135deg,var(--green) 0%,var(--teal3) 100%);
+  border-radius:28px;padding:60px 56px 0;
+  display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:flex-end;
+  position:relative;overflow:hidden;
+  margin:0 28px;max-width:1044px;margin-left:auto;margin-right:auto;
+}
+.hero-card::before{
+  content:'';position:absolute;
+  width:400px;height:400px;border-radius:50%;
+  background:rgba(255,255,255,0.06);
+  top:-100px;right:-60px;pointer-events:none;
+}
+.hero-card::after{
+  content:'';position:absolute;
+  width:240px;height:240px;border-radius:50%;
+  background:rgba(255,255,255,0.04);
+  bottom:-60px;left:200px;pointer-events:none;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);
+  color:#fff;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  border-radius:6px;padding:6px 16px;margin-bottom:20px;
+}
+.hero-content{position:relative;z-index:1;padding-bottom:56px;}
+.hero h1{font-size:clamp(28px,3.8vw,46px);font-weight:800;color:#fff;line-height:1.15;margin-bottom:18px;}
+.hero h1 em{font-style:normal;color:var(--teal2);}
+.hero-sub{font-size:16px;color:rgba(255,255,255,0.88);line-height:1.72;margin-bottom:28px;max-width:500px;}
+.hero-sub strong{color:#fff;font-weight:700;}
+.hero-sub .mech{background:rgba(255,255,255,0.2);border-radius:4px;padding:1px 8px;font-weight:700;}
+.hero-cta-group{display:flex;flex-direction:column;gap:12px;align-items:flex-start;}
+.btn-white{background:#fff;color:var(--green);font-family:var(--font);font-size:16px;font-weight:800;padding:16px 36px;border-radius:10px;border:none;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,0.2);}
+.btn-ghost{background:transparent;border:2px solid rgba(255,255,255,0.5);color:#fff;font-family:var(--font);font-size:14px;font-weight:700;padding:12px 28px;border-radius:8px;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:8px;}
+.btn-ghost:hover{background:rgba(255,255,255,0.15);}
+.hero-microcopy{display:flex;align-items:center;gap:12px;font-size:12px;color:rgba(255,255,255,0.72);flex-wrap:wrap;}
+.hero-microcopy span{display:inline-flex;align-items:center;gap:4px;}
+.hero-img{position:relative;z-index:1;display:flex;align-items:flex-end;}
+.hero-img img{border-radius:16px 16px 0 0;width:100%;max-height:460px;object-fit:cover;object-position:center top;box-shadow:0 -8px 40px rgba(0,0,0,0.25);}
+.hero-float{
+  position:absolute;top:32px;right:-20px;
+  background:#fff;border-radius:12px;padding:14px 18px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.12);
+  display:flex;align-items:center;gap:10px;
+}
+.hero-float .icon{width:40px;height:40px;background:var(--light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:22px;}
+.hero-float .txt strong{display:block;font-size:14px;font-weight:800;color:var(--dark);}
+.hero-float .txt span{font-size:12px;color:var(--gray);}
+.hero-proof{display:flex;align-items:center;gap:8px;margin-top:16px;}
+.hero-proof .stars{color:var(--orange);font-size:16px;}
+.hero-proof span{font-size:13px;color:rgba(255,255,255,0.8);}
+.hero-proof strong{color:#fff;}
+
+/* ── PROOF NUMBERS ── */
+.proof-strip{background:var(--white);padding:32px 0;border-bottom:1px solid var(--border);}
+.proof-inner{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;}
+.proof-item{text-align:center;padding:0 52px;border-right:1px solid var(--border2);}
+.proof-item:last-child{border-right:none;}
+.proof-item strong{display:block;font-size:38px;font-weight:800;color:var(--green);line-height:1.1;}
+.proof-item span{font-size:13px;color:var(--gray);font-weight:600;margin-top:4px;display:block;}
+
+/* ── SECTIONS ── */
+.section{padding:80px 0;}
+.section-white{background:var(--white);}
+.section-light{background:var(--light);}
+.section-bg{background:var(--bg);}
+.section-green{background:linear-gradient(135deg,var(--green),var(--teal3));}
+.section-teal{background:linear-gradient(135deg,var(--teal3),var(--teal));}
+.section-dark{background:var(--dark2);}
+
+.label{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:10px;}
+.label.white{color:var(--teal2);}
+.h2{font-size:clamp(24px,3.2vw,38px);font-weight:800;color:var(--dark);line-height:1.18;margin-bottom:14px;}
+.h2.white{color:#fff;}
+.h2 em{font-style:normal;color:var(--green);}
+.h2.white em{color:var(--teal2);}
+.lead{font-size:16px;color:var(--gray);line-height:1.72;max-width:600px;}
+.lead.white{color:rgba(255,255,255,0.8);}
+
+/* ── VILLAIN ── */
+.villain{background:var(--dark2);padding:52px 0;border-top:3px solid var(--teal);border-bottom:3px solid var(--teal);}
+.villain-inner{max-width:780px;margin:0 auto;text-align:center;padding:0 24px;}
+.villain h2{font-size:clamp(22px,3vw,36px);font-weight:800;color:#fff;margin-bottom:14px;line-height:1.2;}
+.villain h2 em{font-style:normal;color:var(--teal2);}
+.villain p{font-size:16px;color:rgba(255,255,255,0.72);line-height:1.8;margin-bottom:28px;}
+.villain-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);border-bottom:1px solid rgba(0,229,204,0.3);padding-bottom:6px;margin-bottom:20px;}
+.villain-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.villain-pill{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px 20px;font-size:14px;color:rgba(255,255,255,0.8);font-weight:600;}
+.villain-pill span{color:var(--teal2);font-weight:700;}
+
+/* ── PAIN CARDS ── */
 .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-.pain-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:26px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;}
-.pain-card:hover{transform:translateY(-5px);box-shadow:0 24px 56px rgba(10,122,64,0.12);}
-.pain-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--g1),var(--teal),var(--teal2));}
-.pain-icon{font-size:40px;margin-bottom:14px;}
-.pain-card h4{font-size:15px;font-weight:900;color:var(--dark);margin-bottom:8px;line-height:1.3;}
-.pain-card p{font-size:13.5px;color:var(--muted);line-height:1.65;}
-.ba-section{padding:72px 0;background:linear-gradient(135deg,var(--off),var(--off2));}
+.pain-card{background:var(--white);border-radius:12px;padding:28px;border:1px solid var(--border);border-top:3px solid var(--green);transition:box-shadow .2s,transform .2s;}
+.pain-card:hover{box-shadow:0 8px 32px rgba(10,122,64,0.1);transform:translateY(-3px);}
+.pain-icon{width:52px;height:52px;background:var(--light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:14px;}
+.pain-card h4{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:8px;line-height:1.35;}
+.pain-card p{font-size:13.5px;color:var(--gray);line-height:1.65;}
+.pain-quote{background:var(--white);border-left:4px solid var(--teal);border-radius:0 12px 12px 0;padding:22px 28px;margin-bottom:40px;max-width:680px;margin-left:auto;margin-right:auto;box-shadow:0 2px 12px rgba(0,191,165,0.08);}
+.pain-quote p{font-size:17px;color:var(--dark);font-weight:600;line-height:1.7;font-style:italic;}
+.pain-quote cite{display:block;font-size:13px;color:var(--gray);font-style:normal;margin-top:10px;font-weight:600;}
+
+/* ── BEFORE/AFTER ── */
 .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:800px;margin:0 auto;}
-.ba-card{border-radius:24px;padding:32px;}
-.ba-before{background:linear-gradient(135deg,#FFF5F5,#FEE2E2);border:2px solid rgba(229,57,53,0.2);}
-.ba-after{background:linear-gradient(135deg,#F0FDF4,#DCFCE7);border:2px solid rgba(10,122,64,0.2);}
-.ba-label{display:inline-block;font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase;border-radius:20px;padding:5px 16px;margin-bottom:20px;}
-.ba-before .ba-label{background:rgba(229,57,53,0.1);color:#C62828;}
-.ba-after .ba-label{background:rgba(10,122,64,0.1);color:var(--g1);}
+.ba-card{border-radius:12px;padding:28px;}
+.ba-before{background:#FFF5F5;border:1px solid #FEE2E2;border-top:3px solid #EF4444;}
+.ba-after{background:var(--light);border:1px solid var(--border);border-top:3px solid var(--green);}
+.ba-label{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border-radius:6px;padding:4px 12px;margin-bottom:18px;}
+.ba-before .ba-label{background:rgba(239,68,68,0.1);color:#DC2626;}
+.ba-after .ba-label{background:rgba(10,122,64,0.1);color:var(--green);}
 .ba-items{list-style:none;}
-.ba-items li{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(0,0,0,0.06);font-size:14.5px;font-weight:700;}
+.ba-items li{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(0,0,0,0.06);font-size:14px;font-weight:600;}
 .ba-items li:last-child{border-bottom:none;}
-.ba-before .ba-items li{color:#C62828;}
-.ba-after .ba-items li{color:var(--g1);}
-.ba-icon{font-size:20px;flex-shrink:0;}
-.story-block{max-width:680px;margin:0 auto;font-size:16px;color:var(--dark);line-height:1.88;}
-.story-block p{margin-bottom:20px;}
-.story-block strong{color:var(--g1);font-weight:800;}
-.story-block .highlight{background:linear-gradient(135deg,rgba(0,229,204,0.12),rgba(10,122,64,0.08));border-left:4px solid var(--teal);padding:16px 20px;border-radius:0 12px 12px 0;margin:24px 0;}
-.solution-layout{display:grid;grid-template-columns:360px 1fr;gap:60px;align-items:center;}
-.book-mockup{position:relative;}
-.book-img{border-radius:22px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.3);}
-.book-img img{width:100%;height:460px;object-fit:cover;display:block;}
-.book-badge{position:absolute;top:-18px;right:-18px;background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;border-radius:50%;width:92px;height:92px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;text-align:center;box-shadow:0 8px 28px rgba(249,115,22,0.45);}
-.book-badge strong{font-size:24px;line-height:1;font-family:var(--font-display);}
-.book-badge span{font-size:11px;opacity:0.9;}
-.book-tag{position:absolute;bottom:-18px;left:-18px;background:linear-gradient(135deg,var(--g1),var(--teal));color:#fff;border-radius:14px;padding:12px 20px;font-weight:800;font-size:13px;}
-.solution-content h2{font-family:var(--font-display);font-size:40px;font-weight:900;color:var(--dark);line-height:1.1;margin-bottom:16px;}
-.solution-content h2 em{font-style:italic;color:var(--g1);}
-.solution-content .lead{font-size:16px;color:var(--muted);line-height:1.75;margin-bottom:28px;}
-.mech-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(0,191,165,0.15),rgba(10,122,64,0.1));border:1px solid rgba(0,191,165,0.3);border-radius:40px;padding:8px 18px;font-size:13px;font-weight:800;color:var(--g1);margin-bottom:22px;}
-.benefit-list{list-style:none;margin-bottom:32px;}
-.benefit-list li{display:flex;align-items:flex-start;gap:14px;padding:13px 0;border-bottom:1px solid var(--border);font-size:14.5px;color:var(--dark);line-height:1.55;}
+.ba-before .ba-items li{color:#DC2626;}
+.ba-after .ba-items li{color:var(--green3);}
+.ba-icon{font-size:18px;flex-shrink:0;}
+
+/* ── FEATURE BLOCK (imagem + lista) ── */
+.feature-block{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.feature-block.reverse{direction:rtl;}
+.feature-block.reverse > *{direction:ltr;}
+.feature-img{position:relative;}
+.feature-img img{border-radius:20px;width:100%;box-shadow:0 12px 48px rgba(10,122,64,0.15);}
+.feature-img .img-badge{
+  position:absolute;bottom:-20px;left:-20px;
+  background:#fff;border-radius:12px;padding:16px 20px;
+  box-shadow:0 8px 28px rgba(0,0,0,0.12);
+  display:flex;align-items:center;gap:12px;
+}
+.feature-img .img-badge .ib-icon{width:44px;height:44px;background:var(--light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:24px;}
+.feature-img .img-badge strong{display:block;font-size:15px;font-weight:800;color:var(--dark);}
+.feature-img .img-badge span{font-size:12px;color:var(--gray);}
+.feature-list{list-style:none;}
+.feature-list li{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid var(--border);}
+.feature-list li:last-child{border-bottom:none;}
+.feature-list .fi{width:44px;height:44px;min-width:44px;border-radius:10px;background:var(--light);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:22px;}
+.feature-list .ft h4{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:4px;}
+.feature-list .ft p{font-size:13.5px;color:var(--gray);line-height:1.6;}
+
+/* ── SOLUTION / BOOK ── */
+.solution-grid{display:grid;grid-template-columns:380px 1fr;gap:56px;align-items:center;}
+.book-mockup{border-radius:20px;overflow:hidden;box-shadow:0 16px 60px rgba(10,122,64,0.18);border:1px solid var(--border);}
+.book-mockup img{width:100%;height:320px;object-fit:cover;display:block;}
+.book-mockup-footer{background:var(--white);padding:20px 24px;}
+.book-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.badge{display:inline-flex;align-items:center;gap:5px;background:var(--light);border:1px solid var(--border2);border-radius:6px;padding:5px 14px;font-size:12px;font-weight:700;color:var(--green);}
+.badge.orange{background:#FFF7ED;border-color:#FED7AA;color:var(--orange);}
+.mech-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(0,191,165,0.1);border:1px solid rgba(0,191,165,0.3);border-radius:8px;padding:8px 16px;font-size:13px;font-weight:700;color:var(--teal3);margin-bottom:20px;}
+.benefit-list{list-style:none;margin-bottom:28px;}
+.benefit-list li{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);font-size:14.5px;color:var(--dark);line-height:1.55;}
 .benefit-list li:last-child{border-bottom:none;}
-.benefit-list .check{flex-shrink:0;width:26px;height:26px;background:linear-gradient(135deg,var(--g1),var(--teal));color:#fff;border-radius:50%;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:1px;}
-.benefit-list li strong{color:var(--g1);}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;position:relative;}
-.steps::before{content:'';position:absolute;top:44px;left:calc(16.66% + 24px);right:calc(16.66% + 24px);height:2px;background:linear-gradient(90deg,var(--teal),var(--teal2));z-index:0;}
-.step-card{text-align:center;position:relative;z-index:1;}
-.step-num{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--g1),var(--teal),var(--teal2));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:34px;font-weight:900;color:#fff;margin:0 auto 22px;box-shadow:0 8px 32px rgba(10,122,64,0.4);}
-.step-card h4{font-size:18px;font-weight:900;color:#fff;margin-bottom:10px;}
-.step-card p{font-size:14px;color:rgba(255,255,255,0.68);line-height:1.65;}
+.check{flex-shrink:0;width:24px;height:24px;background:var(--green);color:#fff;border-radius:6px;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.benefit-list li strong{color:var(--green);}
+
+/* ── STEPS TIMELINE ── */
+.steps-section{border-radius:24px;padding:60px 56px;margin:0 28px;position:relative;overflow:hidden;}
+.steps-blob{position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,0.05);top:-80px;right:-60px;pointer-events:none;}
+.steps-timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;margin-top:48px;}
+.steps-timeline::before{content:'';position:absolute;top:30px;left:16.66%;right:16.66%;height:2px;background:rgba(255,255,255,0.3);}
+.step-item{text-align:center;position:relative;z-index:1;padding:0 16px;}
+.step-circle{width:60px;height:60px;border-radius:50%;background:#fff;color:var(--green);font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 4px 16px rgba(0,0,0,0.1);}
+.step-item h4{font-size:17px;font-weight:800;color:#fff;margin-bottom:8px;}
+.step-item p{font-size:14px;color:rgba(255,255,255,0.78);line-height:1.65;}
+.step-label{display:inline-block;background:rgba(255,255,255,0.15);border-radius:4px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:1px;color:var(--teal2);text-transform:uppercase;margin-bottom:6px;}
+
+/* ── CHAPTERS ── */
 .chapters-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
-.chapter-card{display:flex;align-items:flex-start;gap:14px;background:var(--white);border:1px solid var(--border);border-radius:16px;padding:20px;transition:transform .15s,box-shadow .15s,border-color .15s;}
-.chapter-card:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(10,122,64,0.1);border-color:var(--teal);}
-.chapter-num{flex-shrink:0;width:38px;height:38px;background:linear-gradient(135deg,var(--g1),var(--teal));color:#fff;border-radius:10px;font-size:14px;font-weight:900;display:flex;align-items:center;justify-content:center;}
-.chapter-card h4{font-size:14px;font-weight:800;color:var(--dark);margin-bottom:4px;}
-.chapter-card p{font-size:12.5px;color:var(--muted);line-height:1.55;}
-.testi-band{background:linear-gradient(90deg,var(--g1),var(--teal),var(--teal2),var(--teal),var(--g1));background-size:200% auto;animation:shimmer-bg 4s linear infinite;padding:28px 0;}
-@keyframes shimmer-bg{to{background-position:200% center;}}
-.testi-band-inner{display:flex;align-items:center;justify-content:center;gap:20px;max-width:800px;margin:0 auto;padding:0 24px;flex-wrap:wrap;}
-.testi-band-inner .stars{color:#fff;font-size:22px;letter-spacing:2px;}
-.testi-band-inner p{color:#fff;font-size:16px;font-weight:800;text-align:center;}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.testi-card{background:var(--white);border-radius:24px;padding:30px;position:relative;overflow:hidden;box-shadow:0 6px 28px rgba(10,122,64,0.09);border:1px solid rgba(10,122,64,0.1);transition:transform .2s;}
-.testi-card:hover{transform:translateY(-4px);}
-.testi-card::before{content:'"';position:absolute;top:-8px;left:18px;font-size:130px;font-weight:900;color:var(--off2);line-height:1;z-index:0;font-family:var(--font-display);}
-.testi-card::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--g1),var(--teal),var(--teal2));}
-.testi-content{position:relative;z-index:1;}
-.testi-stars{color:var(--gold);font-size:20px;letter-spacing:2px;margin-bottom:16px;}
-.testi-card p{font-size:14.5px;color:var(--dark);line-height:1.78;margin-bottom:22px;font-style:italic;}
-.testi-card p strong{font-style:normal;color:var(--g1);font-weight:800;}
-.testi-author{display:flex;align-items:center;gap:12px;}
-.testi-avatar{width:48px;height:48px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#fff;}
-.av1{background:linear-gradient(135deg,#667eea,#764ba2);}
-.av2{background:linear-gradient(135deg,#f093fb,#f5576c);}
-.av3{background:linear-gradient(135deg,#43e97b,#38f9d7);}
-.testi-author strong{display:block;font-size:14px;font-weight:900;color:var(--dark);}
-.testi-author span{font-size:12px;color:var(--muted);}
-.bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:40px;}
-.bonus-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:22px;overflow:hidden;position:relative;transition:transform .2s;}
-.bonus-card:hover{transform:translateY(-5px);}
-.bonus-card:nth-child(1){border-color:rgba(0,229,204,0.25);}
-.bonus-card:nth-child(2){border-color:rgba(249,115,22,0.25);}
-.bonus-card:nth-child(3){border-color:rgba(132,204,22,0.25);}
-.bonus-img{height:170px;overflow:hidden;position:relative;}
-.bonus-img img{width:100%;height:100%;object-fit:cover;opacity:0.8;}
-.bonus-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,35,24,0.9),transparent);}
-.bonus-number{position:absolute;top:14px;left:14px;z-index:1;font-size:11px;font-weight:900;padding:5px 14px;letter-spacing:1px;text-transform:uppercase;border-radius:20px;}
-.bonus-card:nth-child(1) .bonus-number{background:rgba(0,229,204,0.9);color:#021A0A;}
-.bonus-card:nth-child(2) .bonus-number{background:rgba(249,115,22,0.9);color:#fff;}
-.bonus-card:nth-child(3) .bonus-number{background:rgba(132,204,22,0.9);color:#021A0A;}
-.bonus-body{padding:22px;}
-.bonus-card h4{font-family:var(--font-display);font-size:18px;font-weight:900;color:#fff;margin-bottom:10px;}
-.bonus-card p{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.65;margin-bottom:16px;}
-.bonus-value{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.45);}
-.bonus-value strong{font-size:16px;font-weight:900;}
-.bonus-card:nth-child(1) .bonus-value strong{color:var(--teal2);}
-.bonus-card:nth-child(2) .bonus-value strong{color:var(--orange3);}
-.bonus-card:nth-child(3) .bonus-value strong{color:var(--lime);}
-.value-box{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:28px;padding:40px 44px;max-width:640px;margin:0 auto;}
-.value-row{display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
-.value-row span{font-size:15px;color:rgba(255,255,255,0.78);font-weight:600;}
-.value-row .price-old{font-size:15px;color:rgba(255,255,255,0.35);text-decoration:line-through;}
-.value-total{display:flex;align-items:center;justify-content:space-between;padding-top:20px;border-top:2px solid rgba(255,255,255,0.14);margin-top:10px;}
-.value-total span{font-size:16px;color:rgba(255,255,255,0.82);font-weight:700;}
-.value-total strong{font-size:20px;color:rgba(255,255,255,0.45);text-decoration:line-through;}
-.price-reveal{text-align:center;margin-top:36px;}
-.price-label{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
-.price-big{font-family:var(--font-display);font-size:88px;font-weight:900;color:#fff;line-height:1;}
-.price-big sup{font-size:34px;vertical-align:top;margin-top:18px;display:inline-block;}
-.price-note{font-size:13px;color:rgba(255,255,255,0.45);margin-top:10px;}
-.price-note strong{color:var(--orange3);}
-.guarantee-block{display:flex;align-items:center;gap:36px;background:linear-gradient(135deg,rgba(10,122,64,0.12),rgba(0,191,165,0.08));border:2px solid rgba(10,122,64,0.3);border-radius:28px;padding:40px 44px;max-width:700px;margin:0 auto;box-shadow:0 8px 32px rgba(10,122,64,0.1);}
-.guarantee-icon{font-size:80px;flex-shrink:0;line-height:1;}
-.guarantee-text h3{font-family:var(--font-display);font-size:24px;font-weight:900;color:var(--dark);margin-bottom:12px;}
-.guarantee-text h3 em{font-style:italic;color:var(--g1);}
-.guarantee-text p{font-size:15px;color:var(--muted);line-height:1.72;}
-.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:740px;margin:0 auto;}
-.who-card{display:flex;align-items:flex-start;gap:14px;background:var(--white);border:1px solid var(--border);border-radius:18px;padding:20px;transition:border-color .15s;}
-.who-card:hover{border-color:var(--teal);}
-.who-check{flex-shrink:0;width:30px;height:30px;background:linear-gradient(135deg,var(--g1),var(--teal));color:#fff;border-radius:8px;font-size:14px;font-weight:900;display:flex;align-items:center;justify-content:center;}
-.who-card p{font-size:14.5px;color:var(--dark);line-height:1.55;font-weight:600;}
+.chapter-card{display:flex;align-items:flex-start;gap:14px;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:18px;transition:border-color .15s,box-shadow .15s;}
+.chapter-card:hover{border-color:var(--teal);box-shadow:0 4px 16px rgba(0,191,165,0.1);}
+.ch-num{flex-shrink:0;width:36px;height:36px;background:var(--green);color:#fff;border-radius:8px;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+.chapter-card h4{font-size:14px;font-weight:700;color:var(--dark);margin-bottom:4px;}
+.chapter-card p{font-size:12.5px;color:var(--gray);line-height:1.55;}
+
+/* ── TESTI BAND ── */
+.testi-band{background:var(--teal);padding:22px 0;}
+.testi-band-inner{display:flex;align-items:center;justify-content:center;gap:14px;max-width:800px;margin:0 auto;padding:0 24px;flex-wrap:wrap;}
+.testi-band .stars{color:#fff;font-size:18px;}
+.testi-band p{color:#fff;font-size:15px;font-weight:700;text-align:center;}
+
+/* ── TESTIMONIALS ── */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.testi-card{background:var(--white);border-radius:12px;padding:28px;border:1px solid var(--border);border-top:3px solid var(--teal);box-shadow:0 2px 12px rgba(10,122,64,0.06);}
+.testi-stars{color:var(--orange);font-size:17px;letter-spacing:2px;margin-bottom:14px;}
+.testi-card p{font-size:14.5px;color:var(--dark);line-height:1.75;margin-bottom:18px;font-style:italic;}
+.testi-card p strong{font-style:normal;color:var(--green);font-weight:700;}
+.testi-author{display:flex;align-items:center;gap:10px;}
+.testi-avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;}
+.av1{background:linear-gradient(135deg,var(--green),var(--teal));}
+.av2{background:linear-gradient(135deg,var(--green2),var(--teal2));}
+.av3{background:linear-gradient(135deg,var(--teal3),var(--green));}
+.testi-author strong{display:block;font-size:13px;font-weight:700;color:var(--dark);}
+.testi-author span{font-size:11px;color:var(--gray);}
+
+/* ── BONUS ── */
+.bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px;}
+.bonus-card{background:var(--white);border-radius:12px;overflow:hidden;border:1px solid var(--border);transition:box-shadow .2s,transform .2s;}
+.bonus-card:hover{box-shadow:0 8px 28px rgba(10,122,64,0.12);transform:translateY(-3px);}
+.bonus-img{height:160px;overflow:hidden;position:relative;}
+.bonus-img img{width:100%;height:100%;object-fit:cover;}
+.bonus-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,38,20,0.55),transparent);}
+.bonus-num{position:absolute;top:12px;left:12px;z-index:1;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:6px;color:#fff;}
+.bonus-card:nth-child(1) .bonus-num{background:var(--green);}
+.bonus-card:nth-child(2) .bonus-num{background:var(--teal3);}
+.bonus-card:nth-child(3) .bonus-num{background:var(--orange);}
+.bonus-body{padding:20px;}
+.bonus-card h4{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:6px;}
+.bonus-card p{font-size:13px;color:var(--gray);line-height:1.6;margin-bottom:10px;}
+.bonus-value{font-size:13px;color:var(--gray);}
+.bonus-value strong{color:var(--green);font-size:14px;font-weight:700;}
+
+/* ── VALUE BOX ── */
+.value-box{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:36px 40px;max-width:580px;margin:0 auto;box-shadow:0 4px 24px rgba(10,122,64,0.08);}
+.value-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);}
+.value-row span{font-size:14px;color:var(--dark);font-weight:600;}
+.value-row .old{font-size:13px;color:var(--gray2);text-decoration:line-through;}
+.value-total{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:2px solid var(--green);margin-top:6px;}
+.value-total span{font-size:15px;color:var(--dark);font-weight:700;}
+.value-total strong{font-size:17px;color:var(--gray2);text-decoration:line-through;}
+.price-box{text-align:center;margin-top:28px;padding-top:24px;border-top:1px solid var(--border);}
+.price-label{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray);margin-bottom:6px;}
+.price-big{font-size:76px;font-weight:800;color:var(--green);line-height:1;}
+.price-big sup{font-size:30px;vertical-align:top;margin-top:12px;display:inline-block;}
+.price-note{font-size:13px;color:var(--gray);margin-top:6px;}
+.price-note strong{color:var(--orange);}
+
+/* ── BUTTONS (main page) ── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font);font-weight:700;border:none;cursor:pointer;transition:all .15s;border-radius:10px;text-align:center;}
+.btn-green{background:var(--green);color:#fff;font-size:17px;padding:18px 40px;box-shadow:0 4px 20px rgba(10,122,64,0.3);}
+.btn-green:hover{background:var(--green3);transform:translateY(-2px);box-shadow:0 8px 28px rgba(10,122,64,0.4);}
+.btn-green.large{font-size:19px;padding:20px 48px;}
+.btn-green.full{width:100%;}
+.btn-orange{background:var(--orange);color:#fff;font-size:17px;padding:18px 40px;box-shadow:0 4px 20px rgba(249,115,22,0.3);}
+.btn-orange:hover{background:var(--orange2);transform:translateY(-2px);}
+.btn-orange.large{font-size:19px;padding:20px 48px;}
+.microcopy{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--gray);flex-wrap:wrap;}
+.microcopy span{display:inline-flex;align-items:center;gap:4px;}
+
+/* ── GUARANTEE ── */
+.guarantee-block{display:flex;align-items:center;gap:28px;background:var(--white);border:2px solid var(--border2);border-radius:12px;padding:32px 36px;max-width:680px;margin:0 auto;box-shadow:0 4px 20px rgba(10,122,64,0.08);}
+.guarantee-icon{font-size:60px;flex-shrink:0;}
+.guarantee-text h3{font-size:21px;font-weight:800;color:var(--dark);margin-bottom:8px;}
+.guarantee-text h3 em{font-style:normal;color:var(--green);}
+.guarantee-text p{font-size:15px;color:var(--gray);line-height:1.7;}
+
+/* ── WHO ── */
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:720px;margin:0 auto;}
+.who-card{display:flex;align-items:flex-start;gap:12px;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:16px;transition:border-color .15s;}
+.who-card:hover{border-color:var(--green);}
+.who-check{flex-shrink:0;width:26px;height:26px;background:var(--green);color:#fff;border-radius:6px;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.who-card p{font-size:14px;color:var(--dark);line-height:1.52;font-weight:600;}
+
+/* ── FAQ ── */
 .faq-list{max-width:720px;margin:0 auto;}
-.faq-item{border:1px solid var(--border);border-radius:16px;margin-bottom:12px;overflow:hidden;}
-.faq-q{background:var(--off);padding:20px 24px;font-size:15px;font-weight:800;color:var(--dark);display:flex;justify-content:space-between;align-items:center;cursor:pointer;}
-.faq-q .faq-icon{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--g1),var(--teal));color:#fff;font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.faq-a{padding:18px 24px;font-size:14.5px;color:var(--muted);line-height:1.72;background:var(--white);}
+.faq-item{border:1px solid var(--border);border-radius:10px;margin-bottom:10px;overflow:hidden;}
+.faq-q{background:var(--white);padding:18px 22px;font-size:15px;font-weight:700;color:var(--dark);display:flex;justify-content:space-between;align-items:center;cursor:pointer;transition:background .15s;}
+.faq-q:hover{background:var(--light);}
+.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.faq-a{padding:16px 22px;font-size:14.5px;color:var(--gray);line-height:1.72;background:var(--light);}
 .faq-a strong{color:var(--dark);}
-.final-cta{background:linear-gradient(155deg,var(--dark),var(--dark2),#0A2218,var(--dark2));padding:96px 0;text-align:center;position:relative;overflow:hidden;}
-.final-cta::before{content:'';position:absolute;top:-100px;right:-80px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(0,229,204,0.1) 0%,transparent 70%);}
-.final-cta .container{position:relative;z-index:2;}
-.final-cta h2{font-family:var(--font-display);font-size:clamp(32px,4.8vw,56px);font-weight:900;color:#fff;margin-bottom:20px;line-height:1.1;}
-.final-cta h2 em{font-style:italic;color:var(--teal2);}
-.final-cta .sub{font-size:16px;color:rgba(255,255,255,0.68);margin-bottom:12px;line-height:1.72;}
-.final-urgency{font-size:14px;font-weight:800;color:var(--orange3);margin-bottom:36px;}
-.trust-row{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:22px;}
-.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);font-weight:700;}
-footer{background:var(--dark);padding:30px 24px;text-align:center;}
-footer p{color:rgba(255,255,255,0.32);font-size:12.5px;line-height:1.85;}
-footer a{color:rgba(255,255,255,0.32);text-decoration:underline;}
-@media(max-width:800px){
-  .hero-visual{display:none;}
-  .solution-layout{grid-template-columns:1fr;}
-  .book-mockup{max-width:340px;margin:0 auto;}
-  .steps::before{display:none;}
-  .steps,.testi-grid,.bonus-grid,.pain-grid,.who-grid,.chapters-grid,.ba-grid{grid-template-columns:1fr;}
-  .proof-num{padding:14px 20px;border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);}
-  .proof-num:last-child{border-bottom:none;}
+
+/* ── FINAL CTA ── */
+.final-cta-wrap{
+  border-radius:24px;
+  background:linear-gradient(135deg,var(--green) 0%,var(--teal3) 100%);
+  padding:72px 56px;margin:0 28px 80px;
+  text-align:center;position:relative;overflow:hidden;
+}
+.final-cta-wrap::before{content:'';position:absolute;width:360px;height:360px;border-radius:50%;background:rgba(255,255,255,0.05);top:-100px;right:-80px;}
+.final-cta-wrap::after{content:'';position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,0.04);bottom:-60px;left:-60px;}
+.final-cta-wrap h2{font-size:clamp(26px,3.5vw,44px);font-weight:800;color:#fff;margin-bottom:14px;line-height:1.15;position:relative;z-index:1;}
+.final-cta-wrap h2 em{font-style:normal;color:var(--teal2);}
+.final-cta-wrap p{font-size:16px;color:rgba(255,255,255,0.82);margin-bottom:32px;line-height:1.7;position:relative;z-index:1;}
+.final-cta-wrap .urgency{font-size:13px;font-weight:700;color:var(--teal2);margin-bottom:24px;position:relative;z-index:1;}
+.cta-actions{display:flex;flex-direction:column;align-items:center;gap:12px;position:relative;z-index:1;}
+.trust-row{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,0.65);font-weight:600;}
+
+/* ── FOOTER ── */
+footer{background:var(--dark);padding:28px 24px;text-align:center;}
+footer p{color:rgba(255,255,255,0.35);font-size:12.5px;line-height:1.85;}
+footer a{color:rgba(255,255,255,0.35);text-decoration:underline;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .hero-card{grid-template-columns:1fr;padding:48px 32px 0;margin:0 16px;}
+  .hero-img{display:none;}
+  .feature-block,.feature-block.reverse,.solution-grid{grid-template-columns:1fr;direction:ltr;}
+  .pain-grid,.testi-grid,.bonus-grid,.steps-timeline{grid-template-columns:1fr;}
+  .steps-timeline::before{display:none;}
+  .ba-grid,.who-grid,.chapters-grid{grid-template-columns:1fr;}
   .guarantee-block{flex-direction:column;text-align:center;}
-  .btn-primary.large{font-size:18px;padding:20px 36px;}
-  .value-box{padding:28px 22px;}
+  .proof-item{padding:12px 24px;border-right:none;border-bottom:1px solid var(--border2);}
+  .proof-item:last-child{border-bottom:none;}
+  .final-cta-wrap,.steps-section{margin:0 16px;padding:48px 28px;}
+  .btn-green.large,.btn-white{font-size:16px;padding:16px 28px;}
+  .nav-links{display:none;}
 }
 </style>
 </head>
 <body>
 
+<!-- URGENCY BAR -->
 <div id="urgency-bar">
-  <p><span class="fire">&#128293;</span> Oferta de lançamento encerra em: <span id="countdown">72:00:00</span><span class="pill">De R$97 → apenas R$27</span><span class="pill">&#9889; Acesso imediato · 200 vagas</span></p>
+  <p>
+    &#9201; Oferta de lançamento encerra em: <span id="countdown">72:00:00</span>
+    <span class="pill">De R$97 por apenas R$27</span>
+    <span class="pill">&#9889; 200 vagas · Acesso imediato</span>
+  </p>
 </div>
 
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">Nutrir <span>Sem Enjoar</span></div>
+    <div class="nav-links">
+      <a class="nav-link" href="#sobre">Sobre</a>
+      <a class="nav-link" href="#beneficios">O Guia</a>
+      <a class="nav-link" href="#depoimentos">Depoimentos</a>
+      <a class="nav-link" href="#faq">Dúvidas</a>
+      <a href="https://pay.hotmart.com/F106067429A" class="nav-cta">Garantir Acesso — R$27</a>
+    </div>
+    <a href="https://pay.hotmart.com/F106067429A" class="nav-cta" style="display:none;">R$27</a>
+  </div>
+</nav>
+
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="container">
+  <div class="hero-blob1"></div>
+  <div class="hero-blob2"></div>
+  <div class="hero-card">
     <div class="hero-content">
-      <div class="hero-eyebrow"><span class="tag tag-white">&#127807; Guia Para Usuárias de Caneta Emagrecedora</span></div>
+      <div class="hero-tag">&#127807; Para Usuárias de Caneta Emagrecedora</div>
       <h1>O Médico Receitou.<br>A Farmácia Entregou.<br>Mas Ninguém te Ensinou<br><em>Como Comer Com Ela.</em></h1>
-      <p class="hero-sub">O <strong>Guia Nutrir Sem Enjoar</strong> é o protocolo alimentar que <strong>+1.200 mulheres</strong> já usam — incluindo o <span class="mech">Semáforo da Alimentação&#8482;</span>, a ferramenta que elimina toda a dúvida sobre o que comer durante o tratamento com GLP-1.</p>
-      <div class="hero-cta">
-        <a href="https://pay.hotmart.com/F106067429A" class="btn btn-primary large">&#9989; Quero o Guia Agora — R$27</a>
-        <div class="hero-microcopy"><span>&#128274; Pagamento seguro</span><span>&#9889; Acesso imediato</span><span>&#128737; Garantia 7 dias</span><span>&#128241; Funciona no celular</span></div>
+      <p class="hero-sub">
+        O <strong>Guia Nutrir Sem Enjoar</strong> é o protocolo alimentar que <strong>+1.200 mulheres</strong> já usam — incluindo o <span class="mech">Semáforo da Alimentação&#8482;</span>, a ferramenta que elimina toda a dúvida sobre o que comer durante o tratamento com GLP-1.
+      </p>
+      <div class="hero-cta-group">
+        <a href="https://pay.hotmart.com/F106067429A" class="btn-white">&#9989; Quero o Guia Agora — R$27</a>
+        <div class="hero-microcopy">
+          <span>&#128274; Pagamento seguro</span>
+          <span>&#9889; Acesso imediato</span>
+          <span>&#128737; Garantia 7 dias</span>
+          <span>&#128241; No celular</span>
+        </div>
       </div>
-      <div class="hero-proof"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p><span>+1.200 mulheres</span> já estão se alimentando sem enjoo</p></div>
+      <div class="hero-proof">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span><strong>+1.200 mulheres</strong> já se alimentando sem enjoo</span>
+      </div>
     </div>
-  </div>
-  <div class="hero-visual">
-    <div class="hero-card-stack">
-      <div class="hero-main-card">
-        <div class="ebook-icon">&#127807;</div>
-        <h3>Nutrir Sem Enjoar</h3>
-        <p>O Guia Completo de Alimentação<br>para Caneta Emagrecedora</p>
-        <div class="hero-pills"><span class="hero-pill">20 Páginas</span><span class="hero-pill">3 Bônus</span><span class="hero-pill">PDF Completo</span></div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=520&fit=crop&auto=format" alt="Alimentação saudável">
+      <div class="hero-float">
+        <div class="icon">&#128678;</div>
+        <div class="txt"><strong>Semáforo da Alimentação&#8482;</strong><span>Incluso no guia</span></div>
       </div>
-      <div class="hero-float-badge"><strong>R$27</strong><span>lançamento</span></div>
     </div>
   </div>
 </section>
 
-<div class="proof-bar">
-  <div class="proof-nums">
-    <div class="proof-num"><strong>+1.200</strong><span>mulheres usando o guia</span></div>
-    <div class="proof-num"><strong>20</strong><span>páginas de conteúdo prático</span></div>
-    <div class="proof-num"><strong>10</strong><span>receitas anti-enjoo inclusas</span></div>
-    <div class="proof-num"><strong>7 dias</strong><span>de garantia incondicional</span></div>
-  </div>
-</div>
-
-<div class="villain-band">
+<!-- PROOF STRIP -->
+<div class="proof-strip">
   <div class="container">
-    <div class="villain-quote">
-      <div class="villain-line">A lacuna que ninguém preenche</div>
-      <h2>Você provavelmente ouviu:<br><em>“Evite gordura e coma menos.”</em></h2>
-      <p style="font-size:17px;color:rgba(255,255,255,0.75);max-width:600px;margin:0 auto 28px;line-height:1.8;">Certo. Mas ninguém te disse o que fazer quando o enjoo é tão forte que nem água desce bem. Ninguém explicou por que certos alimentos que parecem saudáveis pioram tudo no GLP-1. Essa lacuna — entre o conselho genérico e o protocolo real — é exatamente o que o <strong style="color:var(--teal2);">Nutrir Sem Enjoar</strong> preenche.</p>
-      <div class="villain-items">
-        <div class="villain-item">“Coma menos” <span>→</span> mas quanto, quando e o quê?</div>
-        <div class="villain-item">“Evite gordura” <span>→</span> mas por que a maçã também causa enjoo?</div>
-        <div class="villain-item">“Beba água” <span>→</span> mas por que junto à comida piora tudo?</div>
-      </div>
+    <div class="proof-inner">
+      <div class="proof-item"><strong>+1.200</strong><span>mulheres usando o guia</span></div>
+      <div class="proof-item"><strong>20</strong><span>páginas de conteúdo prático</span></div>
+      <div class="proof-item"><strong>10</strong><span>receitas anti-enjoo</span></div>
+      <div class="proof-item"><strong>7 dias</strong><span>de garantia incondicional</span></div>
     </div>
   </div>
 </div>
 
-<section class="section">
+<!-- VILLAIN -->
+<div class="villain">
+  <div class="villain-inner">
+    <div class="villain-label">A lacuna que ninguém preenche</div>
+    <h2>Você provavelmente ouviu:<br><em>&#8220;Evite gordura e coma menos.&#8221;</em></h2>
+    <p>Certo. Mas ninguém te disse o que fazer quando o enjoo é tão forte que nem água desce bem. Essa lacuna — entre o conselho genérico e o protocolo real — é exatamente o que o <strong style="color:var(--teal2);">Nutrir Sem Enjoar</strong> preenche.</p>
+    <div class="villain-pills">
+      <div class="villain-pill">&#8220;Coma menos&#8221; <span>→</span> mas quanto, quando e o quê?</div>
+      <div class="villain-pill">&#8220;Evite gordura&#8221; <span>→</span> mas por que a maçã causa enjoo?</div>
+      <div class="villain-pill">&#8220;Beba água&#8221; <span>→</span> mas por que junto à comida piora?</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAIN -->
+<section class="section section-white" id="sobre">
   <div class="container">
-    <div class="text-center" style="margin-bottom:48px;"><p class="section-label">Identificação</p><h2 class="section-title">Você Reconhece<br><em>Alguma Dessas Situações?</em></h2></div>
-    <blockquote class="pain-intro">“Era a noite do terceiro dia usando a caneta. Estava sentada na beira da cama com o estômago revirado, sem conseguir engolir nem água. A cabeça girando. O prato na minha frente — e eu não conseguia encárá-lo. Ninguém tinha me avisado que seria assim.”<cite>— relato real de usuária, 42 anos · São Paulo</cite></blockquote>
+    <div class="text-center" style="margin-bottom:40px;">
+      <p class="label">Identificação</p>
+      <h2 class="h2">Você Reconhece<br><em>Alguma Dessas Situações?</em></h2>
+    </div>
+    <blockquote class="pain-quote">
+      <p>&#8220;Era a noite do terceiro dia usando a caneta. Estava sentada na beira da cama com o estômago revirado, sem conseguir engolir nem água. Ninguém tinha me avisado que seria assim.&#8221;</p>
+      <cite>— relato real de usuária, 42 anos · São Paulo</cite>
+    </blockquote>
     <div class="pain-grid">
-      <div class="pain-card"><div class="pain-icon">&#129314;</div><h4>Você tenta comer e o enjoo chega antes do segundo garfo</h4><p>Qualquer alimento parece pesado demais. Até o cheiro da comida já causa mal-estar antes de você começar.</p></div>
-      <div class="pain-card"><div class="pain-icon">&#128565;</div><h4>Tontura no meio do dia porque o corpo está sem combustível</h4><p>Você come tão pouco com medo do enjoo que a fraqueza aparece sem aviso — muitas vezes no trabalho.</p></div>
-      <div class="pain-card"><div class="pain-icon">&#128566;</div><h4>O prato parece enorme e você não passa da metade</h4><p>O estômago ficou menor. Uma garfada a mais e vem o desconforto. Você nunca sabe até onde pode ir.</p></div>
-      <div class="pain-card"><div class="pain-icon">&#128552;</div><h4>Medo de comer qualquer coisa — e fazer tudo piorar</h4><p>Você começa a evitar alimentos. Vai restringindo. E sabe que isso não está certo, mas não sabe o que fazer.</p></div>
-      <div class="pain-card"><div class="pain-icon">&#128564;</div><h4>A fome sumiu — mas a fraqueza e o cansaço não</h4><p>O sinal de fome foi suprimido pelo medicamento. Mas o corpo ainda precisa de energia. E ele cobra a conta.</p></div>
-      <div class="pain-card"><div class="pain-icon">&#10067;</div><h4>Você recebeu a orientação genérica — mas não o protocolo</h4><p>Evite gordura, coma menos, beba água. Certo. Mas o que fazer quando o enjoo não deixa nem isso?</p></div>
+      <div class="pain-card"><div class="pain-icon">&#129314;</div><h4>Enjoo antes do segundo garfo</h4><p>Qualquer alimento parece pesado demais. O cheiro da comida já causa mal-estar.</p></div>
+      <div class="pain-card"><div class="pain-icon">&#128565;</div><h4>Tontura sem saber por quê</h4><p>Você come pouco com medo do enjoo e a fraqueza aparece sem aviso no trabalho.</p></div>
+      <div class="pain-card"><div class="pain-icon">&#128566;</div><h4>Não passa da metade do prato</h4><p>O estômago ficou menor. Uma garfada a mais e vem o desconforto imediato.</p></div>
+      <div class="pain-card"><div class="pain-icon">&#128552;</div><h4>Medo de comer qualquer coisa</h4><p>Você vai restringindo. Sabe que não está certo, mas não sabe o que fazer.</p></div>
+      <div class="pain-card"><div class="pain-icon">&#128564;</div><h4>A fome sumiu — a fraqueza não</h4><p>O GLP-1 suprimiu o sinal de fome. Mas o corpo ainda precisa de energia.</p></div>
+      <div class="pain-card"><div class="pain-icon">&#10067;</div><h4>Recebeu conselho genérico</h4><p>Evite gordura, coma menos. Mas o que fazer quando o enjoo não deixa nem isso?</p></div>
     </div>
   </div>
 </section>
 
-<div class="ba-section">
+<!-- BEFORE/AFTER -->
+<section class="section section-light">
   <div class="container">
-    <div class="text-center" style="margin-bottom:44px;"><p class="section-label">A diferença que faz</p><h2 class="section-title">Sem o Guia — <em>Com o Guia.</em></h2></div>
+    <div class="text-center" style="margin-bottom:40px;">
+      <p class="label">A diferença que faz</p>
+      <h2 class="h2">Sem o Guia — <em>Com o Guia.</em></h2>
+    </div>
     <div class="ba-grid">
       <div class="ba-card ba-before">
         <span class="ba-label">&#10060; Sem o guia</span>
         <ul class="ba-items">
           <li><span class="ba-icon">&#129314;</span> Enjoo em quase toda refeição</li>
           <li><span class="ba-icon">&#128552;</span> Medo de comer qualquer coisa</li>
-          <li><span class="ba-icon">&#128565;</span> Tontura e fraqueza sem saber por quê</li>
-          <li><span class="ba-icon">&#10067;</span> Sem saber o que é seguro ou não</li>
+          <li><span class="ba-icon">&#128565;</span> Tontura e fraqueza sem entender por quê</li>
+          <li><span class="ba-icon">&#10067;</span> Sem saber o que é seguro</li>
           <li><span class="ba-icon">&#128532;</span> Evitando refeições em família</li>
           <li><span class="ba-icon">&#128201;</span> Perda de músculo por não comer proteína</li>
         </ul>
@@ -349,7 +482,7 @@ footer a{color:rgba(255,255,255,0.32);text-decoration:underline;}
         <span class="ba-label">&#9989; Com o guia</span>
         <ul class="ba-items">
           <li><span class="ba-icon">&#128522;</span> Refeições leves, sem sofrimento</li>
-          <li><span class="ba-icon">&#128994;</span> Clareza total: o Semáforo da Alimentação&#8482;</li>
+          <li><span class="ba-icon">&#128994;</span> Semáforo da Alimentação&#8482; — clareza total</li>
           <li><span class="ba-icon">&#9889;</span> Energia real durante o dia inteiro</li>
           <li><span class="ba-icon">&#128203;</span> Plano de 7 dias já pronto para usar</li>
           <li><span class="ba-icon">&#128522;</span> Voltando a comer em família com leveza</li>
@@ -358,175 +491,248 @@ footer a{color:rgba(255,255,255,0.32);text-decoration:underline;}
       </div>
     </div>
   </div>
-</div>
-
-<section class="section section-off diagonal-down">
-  <div class="container">
-    <div class="text-center" style="margin-bottom:48px;"><p class="section-label">A Verdade Que Ninguém te Contou</p><h2 class="section-title">Isso Tem Uma <em>Explicação Específica.</em><br>E Uma Solução Também.</h2></div>
-    <div class="story-block">
-      <p>O medicamento age simulando um hormônio que seu corpo já produz naturalmente — o GLP-1. Esse hormônio <strong>desacelera o esvaziamento do estômago</strong> e age nos centros de saciedade do cérebro. O resultado? A comida fica mais tempo no estômago, qualquer excesso vira enjoo e o sinal de fome desaparece — mesmo quando o corpo ainda precisa de nutrientes.</p>
-      <div class="highlight"><strong>Isso não é fraqueza. Não é exagero. É fisiologia específica do GLP-1</strong> — e as orientações alimentares genéricas não foram feitas para ela. Você estava tentando seguir regras criadas para outro contexto.</div>
-      <p>A diferença não está em comer menos ou comer mais. Está em saber <strong>exatamente o que o seu corpo tolera agora</strong> — quais texturas, quais temperaturas, quais combinações, em que horários. É um protocolo específico. E é disso que você precisa.</p>
-      <p>O <strong>Nutrir Sem Enjoar</strong> foi criado para preencher essa lacuna — com o Semáforo da Alimentação&#8482;, o protocolo anti-tontura e um plano de 7 dias construído especificamente para o corpo de quem usa caneta emagrecedora.</p>
-    </div>
-  </div>
 </section>
 
-<section class="section diagonal-up">
+<!-- FEATURE BLOCK — STORY/SOLUTION -->
+<section class="section section-white" id="beneficios">
   <div class="container">
-    <div class="solution-layout">
-      <div class="book-mockup">
-        <div class="book-img"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=560&fit=crop&auto=format" alt="Guia Nutrir Sem Enjoar"></div>
-        <div class="book-badge"><strong>20</strong><span>páginas</span></div>
-        <div class="book-tag">&#128229; Download imediato</div>
+    <div class="feature-block" style="margin-bottom:80px;">
+      <div class="feature-img">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=480&fit=crop&auto=format" alt="Alimentação saudável">
+        <div class="img-badge">
+          <div class="ib-icon">&#128678;</div>
+          <div><strong>Semáforo da Alimentação&#8482;</strong><span>Verde · Amarelo · Vermelho</span></div>
+        </div>
       </div>
-      <div class="solution-content">
-        <p class="section-label">O Protocolo</p>
-        <h2>Apresentando o<br><em>Nutrir Sem Enjoar</em></h2>
-        <div class="mech-badge">&#128678; Inclui o Semáforo da Alimentação&#8482;</div>
-        <p class="lead">O único guia criado especificamente para o corpo de quem usa caneta emagrecedora — com o que comer, como comer e quando comer para se sentir bem durante todo o tratamento.</p>
+      <div>
+        <p class="label">O Protocolo</p>
+        <h2 class="h2">Apresentando o<br><em>Nutrir Sem Enjoar</em></h2>
+        <div class="mech-tag">&#128678; Inclui o Semáforo da Alimentação&#8482;</div>
+        <p style="font-size:15px;color:var(--gray);line-height:1.75;margin-bottom:24px;">O único guia criado especificamente para o corpo de quem usa caneta emagrecedora — com o que comer, como comer e quando comer para se sentir bem durante todo o tratamento.</p>
         <ul class="benefit-list">
-          <li><span class="check">&#10003;</span><div>O <strong>“Cardápio das Primeiras 72 Horas”</strong> — a lista exata de alimentos que reduzem o enjoo nas semanas mais difíceis</div></li>
-          <li><span class="check">&#10003;</span><div><strong>Os 6 alimentos que parecem saudáveis mas disparam o enjoo</strong> em quem usa GLP-1 — dois deles estão quase certos no seu café da manhã agora</div></li>
+          <li><span class="check">&#10003;</span><div>O <strong>&#8220;Cardápio das Primeiras 72 Horas&#8221;</strong> — alimentos que reduzem o enjoo nas semanas mais difíceis</div></li>
+          <li><span class="check">&#10003;</span><div><strong>Os 6 alimentos que parecem saudáveis mas disparam o enjoo</strong> em quem usa GLP-1</div></li>
           <li><span class="check">&#10003;</span><div>O <strong>Semáforo da Alimentação&#8482;</strong> — verde, amarelo e vermelho para nunca mais ter dúvida</div></li>
-          <li><span class="check">&#10003;</span><div>O <strong>protocolo de hidratação anti-tontura</strong> — quanto, quando e o que adicionar à água</div></li>
-          <li><span class="check">&#10003;</span><div>Como garantir <strong>proteína suficiente</strong> mesmo quando você não consegue comer mais de 5 colheres</div></li>
-          <li><span class="check">&#10003;</span><div>O <strong>guia de emergência para dias ruins</strong> — o que fazer quando o enjoo é forte demais</div></li>
-          <li><span class="check">&#10003;</span><div><strong>Quando buscar ajuda médica</strong> — os 8 sinais que vão além do que qualquer guia pode resolver</div></li>
+          <li><span class="check">&#10003;</span><div>O <strong>protocolo de hidratação anti-tontura</strong> — quanto, quando e o que adicionar</div></li>
+          <li><span class="check">&#10003;</span><div>Como garantir <strong>proteína suficiente</strong> mesmo quando você não consegue comer muito</div></li>
+          <li><span class="check">&#10003;</span><div><strong>Quando buscar ajuda médica</strong> — os 8 sinais de alerta</div></li>
         </ul>
-        <a href="https://pay.hotmart.com/F106067429A" class="btn btn-primary">Quero o Guia Agora — R$27 &#127807;</a>
+        <a href="https://pay.hotmart.com/F106067429A" class="btn btn-green">Quero o Guia — R$27 &#127807;</a>
+      </div>
+    </div>
+
+    <!-- FEATURE BLOCK 2 — BENEFITS -->
+    <div class="feature-block reverse">
+      <div>
+        <p class="label">O que está dentro</p>
+        <h2 class="h2">20 Páginas de <em>Conteúdo Específico</em></h2>
+        <p style="font-size:15px;color:var(--gray);line-height:1.72;margin-bottom:24px;">Nenhuma página genérica. Cada capítulo foi criado para o corpo de quem usa GLP-1.</p>
+        <ul class="feature-list">
+          <li><div class="fi">&#129504;</div><div class="ft"><h4>Por que seu corpo muda com a caneta?</h4><p>Entenda a fisiologia do GLP-1 e por que o enjoo acontece</p></div></li>
+          <li><div class="fi">&#128678;</div><div class="ft"><h4>Semáforo da Alimentação&#8482;</h4><p>Verde, amarelo e vermelho — o que comer e o que evitar</p></div></li>
+          <li><div class="fi">&#127858;</div><div class="ft"><h4>Método do Prato Ideal</h4><p>Como montar cada refeição sem sobrecarregar o estômago</p></div></li>
+          <li><div class="fi">&#128167;</div><div class="ft"><h4>Protocolo de Hidratação Anti-Tontura</h4><p>O que beber, quando e o que adicionar à água</p></div></li>
+        </ul>
+      </div>
+      <div class="feature-img">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=480&fit=crop&auto=format" alt="Alimentação GLP-1">
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section-green" style="padding:80px 0;">
-  <div class="container">
-    <div class="text-center" style="margin-bottom:56px;"><p class="section-label" style="color:var(--teal2);">Simples assim</p><h2 class="section-title white">Em <em>3 Passos</em> Você Já Sente a Diferença</h2></div>
-    <div class="steps">
-      <div class="step-card"><div class="step-num">1</div><h4>Compra e acessa agora</h4><p>Pagamento seguro via Hotmart. Acesso imediato ao guia e todos os bônus no e-mail — em menos de 2 minutos.</p></div>
-      <div class="step-card"><div class="step-num">2</div><h4>Lê o Semáforo&#8482;</h4><p>Começa pelo Capítulo 3. Em 10 minutos você já sabe exatamente o que comer no almoço de hoje.</p></div>
-      <div class="step-card"><div class="step-num">3</div><h4>Aplica e sente a diferença</h4><p>Usa o Plano de 7 Dias do bônus e começa a perceber os resultados já nos primeiros dias.</p></div>
+<!-- HOW IT WORKS (STEPS) -->
+<div style="padding:0 0 80px;background:var(--white);">
+  <div class="steps-section section-green">
+    <div class="steps-blob"></div>
+    <div style="text-align:center;position:relative;z-index:1;">
+      <p class="label white">Simples assim</p>
+      <h2 class="h2 white">Em <em>3 Passos</em> Você Já Sente a Diferença</h2>
+    </div>
+    <div class="steps-timeline">
+      <div class="step-item">
+        <div class="step-circle">1</div>
+        <div class="step-label">Passo 1</div>
+        <h4>Compra e acessa agora</h4>
+        <p>Pagamento seguro via Hotmart. Acesso imediato ao guia e bônus no e-mail em minutos.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">2</div>
+        <div class="step-label">Passo 2</div>
+        <h4>Lê o Semáforo&#8482;</h4>
+        <p>Começa pelo Capítulo 3. Em 10 minutos você sabe exatamente o que comer hoje.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">3</div>
+        <div class="step-label">Passo 3</div>
+        <h4>Aplica e sente a diferença</h4>
+        <p>Segue o Plano de 7 Dias e começa a perceber os resultados já nos primeiros dias.</p>
+      </div>
     </div>
   </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="text-center" style="margin-bottom:44px;"><p class="section-label">O que está dentro</p><h2 class="section-title">20 Páginas de <em>Conteúdo Específico</em></h2><p class="section-sub mx-auto" style="text-align:center;">Nenhuma página genérica. Cada capítulo criado para quem usa GLP-1.</p></div>
-    <div class="chapters-grid">
-      <div class="chapter-card"><div class="chapter-num">01</div><div><h4>Por que Seu Corpo Muda com a Caneta?</h4><p>Entenda a fisiologia do GLP-1 — e por que o enjoo acontece de verdade</p></div></div>
-      <div class="chapter-card"><div class="chapter-num">02</div><div><h4>Os Desafios Mais Comuns</h4><p>Enjoo, tontura, dificuldade de engolir e falta de apetite — causa e solução prática</p></div></div>
-      <div class="chapter-card"><div class="chapter-num">03</div><div><h4>&#128678; O Semáforo da Alimentação&#8482;</h4><p>Verde, amarelo e vermelho — o que comer livremente, com moderação e o que evitar</p></div></div>
-      <div class="chapter-card"><div class="chapter-num">04</div><div><h4>Estratégias Práticas de Refeição</h4><p>8 regras de ouro: porções, mastigacao, timing, temperatura e mais</p></div></div>
-      <div class="chapter-card"><div class="chapter-num">05</div><div><h4>Hidratação: O Aliado Invisível</h4><p>Protocolo anti-tontura — o que beber, quando e o que adicionar à água</p></div></div>
-      <div class="chapter-card"><div class="chapter-num">06</div><div><h4>Truques Anti-Enjoo que Funcionam de Verdade</h4><p>Gengibre, hortãl, limão — os aliados naturais que aliviam rápido</p></div></div>
-      <div class="chapter-card"><div class="chapter-num">07</div><div><h4>Montando o Seu Prato Ideal</h4><p>O método dos quartos — como montar cada refeição sem sobrecarregar</p></div></div>
-      <div class="chapter-card"><div class="chapter-num">08</div><div><h4>FAQ + Quando Buscar Ajuda Médica</h4><p>6 dúvidas respondidas + os 8 sinais de alerta que precisam de médico</p></div></div>
-    </div>
-  </div>
-</section>
-
-<div class="testi-band">
-  <div class="testi-band-inner"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>&#8220;Em 48 horas seguindo o Semáforo, o enjoo das manhãs foi embora. <em>Parece óbvio agora, mas eu nunca teria descoberto sozinha.</em>&#8221; — Carla R., Belo Horizonte</p><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
 </div>
 
-<section class="section section-off">
+<!-- TESTI BAND -->
+<div class="testi-band">
+  <div class="testi-band-inner">
+    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    <p>&#8220;Em 48 horas seguindo o Semáforo, o enjoo das manhãs foi embora. Nunca teria descoberto sozinha.&#8221; — Carla R., Belo Horizonte</p>
+    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="section section-light" id="depoimentos">
   <div class="container">
-    <div class="text-center" style="margin-bottom:44px;"><p class="section-label">Resultados Reais</p><h2 class="section-title">O Que Dizem Quem <em>Já Está Usando</em></h2></div>
+    <div class="text-center" style="margin-bottom:40px;">
+      <p class="label">Resultados Reais</p>
+      <h2 class="h2">O Que Dizem Quem <em>Já Está Usando</em></h2>
+    </div>
     <div class="testi-grid">
-      <div class="testi-card"><div class="testi-content"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&#8220;Estava no 4º dia de Ozempic e não conseguia engolir nem sopa. Meu médico só disse &#8216;é normal, passa&#8217;. Comprei o guia sem muita esperança e logo no primeiro dia segui o Semáforo da Alimentação — jantar de arroz com frango desfiado e cenoura cozida. <strong>Primeira vez em dias que comi sem sentir mal depois.</strong> Vale cada centavo dos R$27.&#8221;</p><div class="testi-author"><div class="testi-avatar av1">A</div><div><strong>Ana Paula M.</strong><span>43 anos · São Paulo — usando semaglutida há 3 semanas</span></div></div></div></div>
-      <div class="testi-card"><div class="testi-content"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&#8220;Eu não sabia que iogurte e frutas cítricas de manhã pioravam meu enjoo — e estava comendo isso todo dia! O Semáforo da Alimentação me mostrou exatamente o que trocar. <strong>Em 48 horas o enjoo das manhãs foi embora.</strong> Parece óbvio agora, mas eu nunca teria descoberto sozinha. Obrigada!&#8221;</p><div class="testi-author"><div class="testi-avatar av2">C</div><div><strong>Carla R.</strong><span>38 anos · Belo Horizonte — Wegovy, 2 meses de uso</span></div></div></div></div>
-      <div class="testi-card"><div class="testi-content"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&#8220;Fiquei 11 dias quase sem comer nada com Mounjaro. Perdi 4 kg mas me sentia péssima — tontura toda tarde, fraqueza. Com o Plano dos 7 Dias aprendi a comer de 3 em 3 horas, pequenas porções na temperatura certa. <strong>Na segunda semana já tinha energia de novo e o enjoo reduziu 80%.</strong> Recomendo para toda mulher que está passando por isso.&#8221;</p><div class="testi-author"><div class="testi-avatar av3">M</div><div><strong>Mônica S.</strong><span>49 anos · Rio de Janeiro — Mounjaro, 1 mês</span></div></div></div></div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&#8220;Estava no 4º dia de Ozempic e não conseguia engolir nem sopa. Segui o Semáforo da Alimentação e <strong>pela primeira vez em dias comi sem sentir mal depois.</strong> Vale cada centavo dos R$27.&#8221;</p>
+        <div class="testi-author"><div class="testi-avatar av1">A</div><div><strong>Ana Paula M.</strong><span>43 anos · São Paulo · semaglutida há 3 semanas</span></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&#8220;Eu não sabia que iogurte e frutas cítricas pioravam meu enjoo. O Semáforo me mostrou o que trocar. <strong>Em 48 horas o enjoo das manhãs foi embora.</strong> Obrigada!&#8221;</p>
+        <div class="testi-author"><div class="testi-avatar av2">C</div><div><strong>Carla R.</strong><span>38 anos · Belo Horizonte · Wegovy, 2 meses</span></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&#8220;Fiquei 11 dias quase sem comer com Mounjaro. Com o Plano de 7 Dias aprendi a comer de 3 em 3 horas. <strong>Na segunda semana o enjoo reduziu 80%.</strong> Recomendo!&#8221;</p>
+        <div class="testi-author"><div class="testi-avatar av3">M</div><div><strong>Mônica S.</strong><span>49 anos · Rio de Janeiro · Mounjaro, 1 mês</span></div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section section-teal">
+<!-- BONUS -->
+<section class="section section-white">
   <div class="container">
-    <div class="text-center" style="margin-bottom:44px;"><p class="section-label" style="color:var(--teal2);">Incluído na sua compra</p><h2 class="section-title white">+ 3 Bônus Que <em>Completam</em> Tudo</h2><p class="section-sub white mx-auto" style="text-align:center;">Tudo o que você precisa para começar hoje — sem buscar mais nada em lugar nenhum.</p></div>
+    <div class="text-center" style="margin-bottom:40px;">
+      <p class="label">Incluído na sua compra</p>
+      <h2 class="h2">+ 3 Bônus Que <em>Completam</em> Tudo</h2>
+    </div>
     <div class="bonus-grid">
-      <div class="bonus-card"><div class="bonus-img"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&h=260&fit=crop&auto=format" alt="Plano alimentar"><span class="bonus-number">Bônus 01</span></div><div class="bonus-body"><h4>Plano Alimentar 7 Dias</h4><p>7 dias de refeições completas, práticas e testadas para não causar enjoo.</p><div class="bonus-value">Valor avulso: <strong>R$37</strong></div></div></div>
-      <div class="bonus-card"><div class="bonus-img"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=260&fit=crop&auto=format" alt="Receitas"><span class="bonus-number">Bônus 02</span></div><div class="bonus-body"><h4>10 Receitas Anti-Enjoo</h4><p>10 receitas simples, leves e nutritivas para os dias em que comer parece impossível.</p><div class="bonus-value">Valor avulso: <strong>R$27</strong></div></div></div>
-      <div class="bonus-card"><div class="bonus-img"><img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=500&h=260&fit=crop&auto=format" alt="Lista de compras"><span class="bonus-number">Bônus 03</span></div><div class="bonus-body"><h4>Lista de Compras Pronta</h4><p>Lista completa de supermercado com todos os alimentos recomendados, organizados por categoria.</p><div class="bonus-value">Valor avulso: <strong>R$17</strong></div></div></div>
+      <div class="bonus-card">
+        <div class="bonus-img"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&h=240&fit=crop&auto=format" alt="Plano"><span class="bonus-num">Bônus 01</span></div>
+        <div class="bonus-body"><h4>Plano Alimentar 7 Dias</h4><p>7 dias de refeições práticas e testadas para não causar enjoo — é só seguir.</p><div class="bonus-value">Valor: <strong>R$37</strong></div></div>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-img"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=240&fit=crop&auto=format" alt="Receitas"><span class="bonus-num">Bônus 02</span></div>
+        <div class="bonus-body"><h4>10 Receitas Anti-Enjoo</h4><p>Receitas simples, leves e nutritivas para os dias em que comer parece impossível.</p><div class="bonus-value">Valor: <strong>R$27</strong></div></div>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-img"><img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=500&h=240&fit=crop&auto=format" alt="Lista"><span class="bonus-num">Bônus 03</span></div>
+        <div class="bonus-body"><h4>Lista de Compras Pronta</h4><p>Lista completa de supermercado com todos os alimentos recomendados por categoria.</p><div class="bonus-value">Valor: <strong>R$17</strong></div></div>
+      </div>
     </div>
     <div class="value-box">
-      <div class="value-row"><span>&#128217; Guia Nutrir Sem Enjoar (20 páginas)</span><span class="price-old">R$67</span></div>
-      <div class="value-row"><span>&#128678; Semáforo da Alimentação&#8482; (incluso)</span><span class="price-old">—</span></div>
-      <div class="value-row"><span>&#128203; Bônus 1 — Plano Alimentar 7 Dias</span><span class="price-old">R$37</span></div>
-      <div class="value-row"><span>&#129385; Bônus 2 — 10 Receitas Anti-Enjoo</span><span class="price-old">R$27</span></div>
-      <div class="value-row"><span>&#128722; Bônus 3 — Lista de Compras Pronta</span><span class="price-old">R$17</span></div>
-      <div class="value-total"><span>Valor total do pacote completo:</span><strong>R$148,00</strong></div>
-      <div class="price-reveal"><p class="price-label">Você investe apenas</p><p class="price-big"><sup>R$</sup>27</p><p class="price-note"><strong>Oferta de lançamento</strong> · Apenas 200 vagas neste preço</p></div>
-    </div>
-    <div style="text-align:center;margin-top:40px;">
-      <a href="https://pay.hotmart.com/F106067429A" class="btn btn-primary large">&#9989; Quero Tudo Agora — R$27</a>
-      <div class="hero-microcopy" style="justify-content:center;margin-top:16px;"><span style="color:rgba(255,255,255,0.6);">&#128274; Pagamento seguro</span><span style="color:rgba(255,255,255,0.6);">&#9889; Acesso imediato</span><span style="color:rgba(255,255,255,0.6);">&#128737; Garantia 7 dias</span></div>
+      <div class="value-row"><span>&#128217; Guia Nutrir Sem Enjoar (20 pág.)</span><span class="old">R$67</span></div>
+      <div class="value-row"><span>&#128678; Semáforo da Alimentação&#8482;</span><span class="old">incluso</span></div>
+      <div class="value-row"><span>&#128203; Bônus 1 — Plano 7 Dias</span><span class="old">R$37</span></div>
+      <div class="value-row"><span>&#127805; Bônus 2 — 10 Receitas</span><span class="old">R$27</span></div>
+      <div class="value-row"><span>&#128722; Bônus 3 — Lista de Compras</span><span class="old">R$17</span></div>
+      <div class="value-total"><span>Valor total do pacote:</span><strong>R$148,00</strong></div>
+      <div class="price-box">
+        <p class="price-label">Você investe apenas</p>
+        <p class="price-big"><sup>R$</sup>27</p>
+        <p class="price-note"><strong>Oferta de lançamento</strong> · Apenas 200 vagas neste preço</p>
+      </div>
+      <div style="margin-top:24px;">
+        <a href="https://pay.hotmart.com/F106067429A" class="btn btn-orange large" style="width:100%;justify-content:center;">&#9989; Quero Tudo Agora — R$27</a>
+        <div class="microcopy" style="justify-content:center;margin-top:12px;">
+          <span>&#128274; Seguro</span>
+          <span>&#9889; Imediato</span>
+          <span>&#128737; 7 dias</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- GUARANTEE -->
+<section class="section section-light">
   <div class="container">
-    <div class="text-center" style="margin-bottom:44px;"><p class="section-label">Risco Zero</p><h2 class="section-title">Você Não Está<br><em>Comprando Às Cegas.</em></h2></div>
+    <div class="text-center" style="margin-bottom:40px;">
+      <p class="label">Risco Zero</p>
+      <h2 class="h2">Você Não Está<br><em>Comprando Às Cegas.</em></h2>
+    </div>
     <div class="guarantee-block">
       <div class="guarantee-icon">&#128737;</div>
-      <div class="guarantee-text"><h3>Garantia Incondicional de <em>7 Dias</em></h3><p>Por R$27 — menos do que um lanche no shopping — você tem acesso ao guia completo, aos três bônus e à garantia incondicional de 7 dias. Se não ficar satisfeita por qualquer motivo, reembolso total. <strong>100% do valor devolvido</strong>, sem perguntas. O risco é todo nosso.</p></div>
+      <div class="guarantee-text">
+        <h3>Garantia Incondicional de <em>7 Dias</em></h3>
+        <p>Se não ficar satisfeita por qualquer motivo, reembolso total. <strong>100% do valor devolvido</strong>, sem perguntas, sem burocracia. O risco é todo nosso.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section section-off2">
+<!-- WHO -->
+<section class="section section-white">
   <div class="container">
-    <div class="text-center" style="margin-bottom:44px;"><p class="section-label">Este guia é para você se…</p><h2 class="section-title">Você Se <em>Identifica</em> Com Algum Desses Pontos?</h2></div>
+    <div class="text-center" style="margin-bottom:40px;">
+      <p class="label">Este guia é para você se…</p>
+      <h2 class="h2">Você Se <em>Identifica</em> Com Algum Desses Pontos?</h2>
+    </div>
     <div class="who-grid">
-      <div class="who-card"><div class="who-check">&#10003;</div><p>Usa ou vai começar a usar caneta emagrecedora e quer se preparar do jeito certo</p></div>
-      <div class="who-card"><div class="who-check">&#10003;</div><p>Já usa e sofre com enjoo, tontura ou dificuldade de comer no dia a dia</p></div>
-      <div class="who-card"><div class="who-check">&#10003;</div><p>Tem medo de comer qualquer coisa e piorar os sintomas do tratamento</p></div>
-      <div class="who-card"><div class="who-check">&#10003;</div><p>Quer ir além do conselho genérico e ter um protocolo real para o seu corpo</p></div>
-      <div class="who-card"><div class="who-check">&#10003;</div><p>Quer maximizar os resultados do tratamento sem sacrificar sua saúde</p></div>
-      <div class="who-card"><div class="who-check">&#10003;</div><p>Quer informação prática e confiável — sem pesquisar horas no Google</p></div>
+      <div class="who-card"><div class="who-check">&#10003;</div><p>Usa caneta emagrecedora e quer se preparar do jeito certo</p></div>
+      <div class="who-card"><div class="who-check">&#10003;</div><p>Já usa e sofre com enjoo, tontura ou dificuldade de comer</p></div>
+      <div class="who-card"><div class="who-check">&#10003;</div><p>Tem medo de comer qualquer coisa e piorar os sintomas</p></div>
+      <div class="who-card"><div class="who-check">&#10003;</div><p>Quer ir além do conselho genérico e ter um protocolo real</p></div>
+      <div class="who-card"><div class="who-check">&#10003;</div><p>Quer maximizar os resultados do tratamento</p></div>
+      <div class="who-card"><div class="who-check">&#10003;</div><p>Quer informação prática sem pesquisar horas no Google</p></div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- FAQ -->
+<section class="section section-light" id="faq">
   <div class="container">
-    <div class="text-center" style="margin-bottom:44px;"><p class="section-label">Dúvidas</p><h2 class="section-title">Perguntas <em>Frequentes</em></h2></div>
+    <div class="text-center" style="margin-bottom:40px;">
+      <p class="label">Dúvidas</p>
+      <h2 class="h2">Perguntas <em>Frequentes</em></h2>
+    </div>
     <div class="faq-list">
-      <div class="faq-item"><div class="faq-q">Este guia substitui o acompanhamento médico?<div class="faq-icon">+</div></div><div class="faq-a">Não — e isso está claro em todas as páginas. O guia é <strong>informativo e complementar</strong>. Não substitui avaliação médica ou nutricional individualizada.</div></div>
-      <div class="faq-item"><div class="faq-q">Funciona para qualquer tipo de caneta emagrecedora?<div class="faq-icon">+</div></div><div class="faq-a">Sim. O guia foi desenvolvido para todos os medicamentos injetáveis para emagrecimento — incluindo semaglutida (Ozempic, Wegovy), liraglutida e tirzepatida (Mounjaro).</div></div>
-      <div class="faq-item"><div class="faq-q">Como vou receber o guia após a compra?<div class="faq-icon">+</div></div><div class="faq-a">Assim que o pagamento for confirmado, você recebe um e-mail com acesso à área de membros no Hotmart. O guia e os três bônus ficam disponíveis para baixar em PDF e acessar em qualquer celular, tablet ou computador.</div></div>
-      <div class="faq-item"><div class="faq-q">E se eu não gostar do guia?<div class="faq-icon">+</div></div><div class="faq-a">Você tem 7 dias de garantia total e incondicional. Se não ficar satisfeita por qualquer motivo, solicite o reembolso direto no Hotmart — <strong>100% do valor devolvido, sem perguntas</strong>.</div></div>
-      <div class="faq-item"><div class="faq-q">Preciso ter experiência com alimentação saudável?<div class="faq-icon">+</div></div><div class="faq-a">De forma alguma. O guia foi escrito em linguagem simples e acessível. O Semáforo da Alimentação&#8482; foi criado exatamente para eliminar qualquer necessidade de conhecimento prévio.</div></div>
-      <div class="faq-item"><div class="faq-q">Qual a diferença entre este guia e uma dieta comum?<div class="faq-icon">+</div></div><div class="faq-a">Este não é uma dieta. É um protocolo alimentar <strong>criado especificamente para o corpo de quem usa GLP-1</strong> — com foco em reduzir os efeitos colaterais e manter a nutrição adequada durante o tratamento.</div></div>
+      <div class="faq-item"><div class="faq-q">Este guia substitui o acompanhamento médico?<div class="faq-icon">+</div></div><div class="faq-a">Não — o guia é <strong>informativo e complementar</strong>. Não substitui avaliação médica ou nutricional individualizada.</div></div>
+      <div class="faq-item"><div class="faq-q">Funciona para qualquer caneta emagrecedora?<div class="faq-icon">+</div></div><div class="faq-a">Sim. Funciona para semaglutida (Ozempic, Wegovy), liraglutida e tirzepatida (Mounjaro).</div></div>
+      <div class="faq-item"><div class="faq-q">Como vou receber o guia?<div class="faq-icon">+</div></div><div class="faq-a">Imediatamente após o pagamento, você recebe um e-mail com acesso à área de membros no Hotmart — PDF em qualquer dispositivo.</div></div>
+      <div class="faq-item"><div class="faq-q">E se eu não gostar?<div class="faq-icon">+</div></div><div class="faq-a">7 dias de garantia total — <strong>100% do valor devolvido, sem perguntas</strong>.</div></div>
+      <div class="faq-item"><div class="faq-q">Preciso ter experiência com alimentação saudável?<div class="faq-icon">+</div></div><div class="faq-a">Não. O Semáforo da Alimentação&#8482; foi criado para eliminar qualquer necessidade de conhecimento prévio.</div></div>
+      <div class="faq-item"><div class="faq-q">Qual a diferença entre este guia e uma dieta comum?<div class="faq-icon">+</div></div><div class="faq-a">Não é dieta. É um protocolo <strong>criado especificamente para o corpo de quem usa GLP-1</strong>.</div></div>
     </div>
   </div>
 </section>
 
-<section class="final-cta">
-  <div class="container">
+<!-- FINAL CTA -->
+<div style="background:var(--white);padding-bottom:0;">
+  <div class="final-cta-wrap">
     <h2>A Caneta Faz a Parte Dela.<br><em>Está na Hora de Fazer a Sua.</em></h2>
-    <p class="sub">Cada dia sem este guia é um dia de enjoo que você não precisava sentir.<br>A informação está aqui — e ela custa menos do que a gorjeta que você deixou no último restaurante.</p>
-    <p class="final-urgency">&#9201; Oferta de lançamento: R$27 enquanto restarem vagas</p>
-    <a href="https://pay.hotmart.com/F106067429A" class="btn btn-primary large">&#9989; Quero o Guia Agora — R$27</a>
-    <div class="trust-row">
-      <span class="trust-item">&#128274; Pagamento 100% seguro via Hotmart</span>
-      <span class="trust-item">&#9889; Acesso imediato após confirmação</span>
-      <span class="trust-item">&#128241; Funciona em celular, tablet e PC</span>
-      <span class="trust-item">&#128737; Garantia incondicional de 7 dias</span>
+    <p>Cada dia sem este guia é um dia de enjoo que você não precisava sentir.<br>A informação está aqui — por apenas R$27.</p>
+    <p class="urgency">&#9201; Oferta de lançamento: R$27 enquanto restarem vagas</p>
+    <div class="cta-actions">
+      <a href="https://pay.hotmart.com/F106067429A" class="btn-white" style="font-size:19px;padding:20px 52px;">&#9989; Quero o Guia Agora — R$27</a>
+      <div class="trust-row">
+        <span class="trust-item">&#128274; Pagamento 100% seguro</span>
+        <span class="trust-item">&#9889; Acesso imediato</span>
+        <span class="trust-item">&#128241; Funciona no celular</span>
+        <span class="trust-item">&#128737; Garantia 7 dias</span>
+      </div>
     </div>
   </div>
-</section>
+</div>
 
+<!-- FOOTER -->
 <footer>
   <p>© 2025 César Carvalho · <a href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a> · <a href="#">Contato</a></p>
-  <p style="margin-top:8px;">Este guia é de caráter informativo e educacional. Não substitui consulta médica ou nutricional profissional individualizada.</p>
+  <p style="margin-top:8px;">Este guia é de caráter informativo e educacional. Não substitui consulta médica ou nutricional profissional.</p>
 </footer>
 
 <script>
 (function(){
-  const KEY='nse_v2_timer';const D=72*3600;
+  const KEY='nse_timer';const D=72*3600;
   let end=+localStorage.getItem(KEY)||0;
   if(!end||end<Date.now()){end=Date.now()+D*1000;localStorage.setItem(KEY,end);}
   function tick(){
@@ -539,6 +745,9 @@ footer a{color:rgba(255,255,255,0.32);text-decoration:underline;}
     if(diff>0)requestAnimationFrame(tick);
   }
   tick();
+  // Nav mobile toggle
+  const navCtas=document.querySelectorAll('.nav-cta');
+  if(window.innerWidth<=960&&navCtas[1])navCtas[1].style.display='flex';
 })();
 </script>
 </body>
