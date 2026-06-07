@@ -614,7 +614,7 @@ footer {
 
 <!-- BARRA URGÊNCIA -->
 <div class="barra-urgencia">
-  ⏱ Oferta de lançamento encerra em: <strong id="countdown">23:47:12</strong> &nbsp;<span>· De R$97 por apenas R$27 · Apenas 200 vagas</span>
+  ⏱ Oferta de lançamento encerra em: <strong id="countdown">47:23:00</strong> &nbsp;<span>· De R$97 por apenas R$27 · <strong id="vagas">23 vagas restantes</strong></span>
 </div>
 
 <!-- HERO -->
@@ -961,12 +961,12 @@ footer {
 </footer>
 
 <script>
-// Timer real com localStorage
+// Timer real com localStorage — 47h23min, persiste entre recarregamentos
 function startTimer() {
   const key = 'nse_timer_end';
   let end = localStorage.getItem(key);
   if (!end) {
-    end = Date.now() + 23 * 3600 * 1000 + 47 * 60 * 1000 + 12 * 1000;
+    end = Date.now() + 47 * 3600 * 1000 + 23 * 60 * 1000;
     localStorage.setItem(key, end);
   }
   function update() {
@@ -984,6 +984,25 @@ function startTimer() {
   setInterval(update, 1000);
 }
 startTimer();
+
+// Vagas restantes com localStorage — começa em 23, cai 1 a cada 4h, trava em 1
+function startVagas() {
+  const key = 'nse_vagas_start';
+  let start = localStorage.getItem(key);
+  if (!start) {
+    start = Date.now();
+    localStorage.setItem(key, start);
+  }
+  function update() {
+    const horasPassadas = (Date.now() - parseInt(start)) / (3600 * 1000);
+    const reducoes = Math.floor(horasPassadas / 4);
+    const vagas = Math.max(1, 23 - reducoes);
+    document.getElementById('vagas').textContent = vagas + ' vagas restantes';
+  }
+  update();
+  setInterval(update, 60 * 1000);
+}
+startVagas();
 
 // FAQ accordion
 function toggleFaq(el) {
