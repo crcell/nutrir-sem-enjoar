@@ -1087,20 +1087,22 @@ footer {
 <script>
 function startTimer() {
   const key = 'nse_timer_end';
-  let end = localStorage.getItem(key);
-  if (!end) {
-    end = Date.now() + 47 * 3600 * 1000 + 23 * 60 * 1000;
+  const DURACAO = 47 * 3600 * 1000 + 23 * 60 * 1000;
+  let end = parseInt(localStorage.getItem(key) || '0');
+  if (!end || end <= Date.now()) {
+    end = Date.now() + DURACAO;
     localStorage.setItem(key, end);
   }
   function update() {
-    const diff = parseInt(end) - Date.now();
+    const diff = end - Date.now();
     if (diff <= 0) {
-      document.getElementById('countdown').textContent = '00:00:00';
-      return;
+      end = Date.now() + DURACAO;
+      localStorage.setItem(key, end);
     }
-    const h = Math.floor(diff / 3600000).toString().padStart(2, '0');
-    const m = Math.floor((diff % 3600000) / 60000).toString().padStart(2, '0');
-    const s = Math.floor((diff % 60000) / 1000).toString().padStart(2, '0');
+    const d = Math.max(0, end - Date.now());
+    const h = Math.floor(d / 3600000).toString().padStart(2, '0');
+    const m = Math.floor((d % 3600000) / 60000).toString().padStart(2, '0');
+    const s = Math.floor((d % 60000) / 1000).toString().padStart(2, '0');
     document.getElementById('countdown').textContent = h + ':' + m + ':' + s;
   }
   update();
