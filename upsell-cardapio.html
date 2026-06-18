@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardápio 30 Dias Anti-Enjoo — Nutrir Sem Enjoar</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g1:#0A7A40;--g2:#0FA858;--teal:#00BFA5;--teal2:#00E5CC;
+  --orange:#F97316;--red:#E53935;--amber:#D97706;
+  --dark:#07160D;--dark2:#0D2318;--dark3:#1A3A26;
+  --white:#FFFFFF;--off:#F0FAF4;--muted:#6B9A7A;--muted2:#8BA898;
+  --border:rgba(10,122,64,0.14);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Nunito',sans-serif;background:#C8DDD0;display:flex;flex-direction:column;align-items:center;gap:24px;padding:30px 20px;}
+
+/* ====== PAGE BASE ====== */
+.page{width:794px;min-height:1123px;background:var(--white);position:relative;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 60px rgba(0,0,0,0.18);}
+
+/* ====== PHOTO FULL-BLEED ====== */
+.photo-full{position:absolute;inset:0;}
+.photo-full img{width:100%;height:100%;object-fit:cover;display:block;}
+.photo-overlay{position:absolute;inset:0;}
+
+/* ====== COVER ====== */
+.cover{padding:0;justify-content:flex-end;}
+.cover-body{position:relative;z-index:2;padding:52px 60px 56px;}
+.cover-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;border-radius:40px;padding:7px 18px;margin-bottom:22px;}
+.cover h1{font-size:62px;font-weight:900;color:#fff;line-height:1.03;margin-bottom:14px;}
+.cover h1 em{font-style:normal;color:var(--teal2);}
+.cover-sub{font-size:17px;color:rgba(255,255,255,0.8);line-height:1.55;max-width:500px;margin-bottom:44px;}
+.cover-divider{width:72px;height:4px;background:linear-gradient(90deg,var(--teal2),var(--g1));border-radius:2px;margin-bottom:36px;}
+.cover-author{display:flex;align-items:center;gap:16px;}
+.cover-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--teal2),var(--g2));display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid rgba(255,255,255,0.3);}
+.cover-author-name{color:#fff;font-size:15px;font-weight:800;}
+.cover-author-sub{color:rgba(255,255,255,0.55);font-size:12px;margin-top:2px;}
+.cover-badge{position:absolute;top:52px;right:60px;z-index:3;background:rgba(255,255,255,0.12);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.25);border-radius:20px;padding:20px 24px;text-align:center;}
+.cover-badge span{display:block;color:rgba(255,255,255,0.6);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+.cover-badge strong{display:block;color:var(--teal2);font-size:44px;font-weight:900;line-height:1.1;}
+.cover-pills{position:absolute;top:52px;left:60px;z-index:3;display:flex;flex-direction:column;gap:10px;}
+.cover-pill{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:12px;font-weight:700;border-radius:30px;padding:7px 16px;display:flex;align-items:center;gap:7px;}
+
+/* ====== CONTENT PAGE ====== */
+.cp{padding:48px 56px 36px;}
+
+/* ====== PAGE HEADER ====== */
+.ph{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--border);}
+.ph-l{display:flex;align-items:center;gap:10px;}
+.ph-dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--g1),var(--teal));}
+.ph h2{font-size:18px;font-weight:800;color:var(--dark);}
+.ph-r{font-size:11px;font-weight:700;color:var(--muted2);letter-spacing:1.5px;text-transform:uppercase;}
+
+/* ====== TYPOGRAPHY ====== */
+.sec-title{font-size:22px;font-weight:900;color:var(--g1);margin-bottom:10px;line-height:1.2;}
+p.body{font-size:13px;color:#3A5444;line-height:1.75;margin-bottom:12px;}
+p.body strong{color:var(--dark);font-weight:800;}
+
+/* ====== CARDS ====== */
+.card{border-radius:14px;padding:16px 18px;margin-bottom:10px;border:1px solid transparent;}
+.card-green{background:#E8F8EE;border-color:rgba(10,122,64,0.18);}
+.card-teal{background:#E0F7F4;border-color:rgba(0,191,165,0.2);}
+.card-orange{background:#FEF0E6;border-color:rgba(249,115,22,0.2);}
+.card-red{background:#FDECEA;border-color:rgba(229,57,53,0.18);}
+.card-amber{background:#FFFBEB;border-color:rgba(217,119,6,0.2);}
+.card h4{font-size:13px;font-weight:900;color:var(--dark);margin-bottom:5px;display:flex;align-items:center;gap:8px;line-height:1.3;}
+.card p{font-size:12.5px;color:#4A6654;line-height:1.6;}
+.card p strong{color:var(--dark);}
+
+/* ====== CALLOUT ====== */
+.callout{border-left:5px solid;padding:13px 16px;border-radius:0 12px 12px 0;margin-bottom:12px;}
+.callout-green{border-color:var(--g1);background:#E8F8EE;}
+.callout-teal{border-color:var(--teal);background:#E0F7F4;}
+.callout-orange{border-color:var(--orange);background:#FEF0E6;}
+.callout-red{border-color:var(--red);background:#FDECEA;}
+.callout p{font-size:12.5px;color:#3A5444;line-height:1.65;}
+.callout p strong{color:var(--dark);}
+.callout-red p{color:#7F1D1D;}
+
+/* ====== CHECKLIST ====== */
+ul.ck{list-style:none;margin-bottom:10px;}
+ul.ck li{font-size:12.5px;color:#3A5444;padding:6px 0 6px 26px;position:relative;border-bottom:1px solid var(--border);line-height:1.5;}
+ul.ck li:last-child{border-bottom:none;}
+ul.ck li::before{content:'✓';position:absolute;left:0;color:var(--g1);font-weight:900;font-size:13px;}
+ul.ck li strong{color:var(--dark);font-weight:800;}
+
+ul.xk{list-style:none;margin-bottom:10px;}
+ul.xk li{font-size:12.5px;color:#7F1D1D;padding:6px 0 6px 26px;position:relative;border-bottom:1px solid rgba(229,57,53,0.1);line-height:1.5;}
+ul.xk li:last-child{border-bottom:none;}
+ul.xk li::before{content:'✗';position:absolute;left:0;color:var(--red);font-weight:900;font-size:13px;}
+
+/* ====== GRID ====== */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+
+/* ====== PHOTO STRIP ====== */
+.photo-strip{width:100%;border-radius:14px;overflow:hidden;margin-bottom:14px;}
+.photo-strip img{width:100%;object-fit:cover;display:block;}
+.photo-strip.h-md img{height:160px;}
+.photo-strip.h-sm img{height:110px;}
+
+/* ====== WEEK BANNER ====== */
+.week-banner{border-radius:12px;margin-bottom:12px;overflow:hidden;}
+.week-banner-inner{background:linear-gradient(135deg,var(--g1),var(--g2));padding:12px 20px;display:flex;align-items:center;gap:14px;}
+.week-num{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:9px;font-weight:900;letter-spacing:2px;text-transform:uppercase;border-radius:30px;padding:4px 12px;flex-shrink:0;}
+.week-info h3{font-size:15px;font-weight:900;color:#fff;margin-bottom:1px;}
+.week-info p{font-size:11px;color:rgba(255,255,255,0.75);line-height:1.3;}
+
+/* ====== DAY CARD ====== */
+.day-card{border:1px solid #C6EDD8;border-radius:10px;margin-bottom:8px;overflow:hidden;}
+.day-hd{background:linear-gradient(135deg,rgba(10,122,64,0.07),rgba(0,191,165,0.05));border-bottom:1px solid #C6EDD8;padding:6px 14px;display:flex;align-items:center;gap:10px;}
+.day-n{background:linear-gradient(135deg,var(--g1),var(--teal));color:#fff;font-size:9px;font-weight:900;letter-spacing:1px;border-radius:20px;padding:3px 10px;flex-shrink:0;}
+.day-t{font-size:12px;font-weight:700;color:var(--dark);}
+
+.meals-row{display:grid;grid-template-columns:repeat(4,1fr);}
+.meal-c{padding:8px 11px;border-right:1px solid #E8F8EE;}
+.meal-c:last-child{border-right:none;}
+.ml{font-size:9.5px;font-weight:900;color:var(--g1);letter-spacing:0.5px;margin-bottom:2px;text-transform:uppercase;}
+.mn{font-size:11.5px;font-weight:800;color:var(--dark);line-height:1.25;margin-bottom:2px;}
+.md{font-size:10px;color:var(--muted);line-height:1.3;}
+
+/* ====== SUBSTITUTION TABLE ====== */
+.sub-table{width:100%;border-collapse:collapse;margin-bottom:12px;font-size:12px;}
+.sub-table th{background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;font-size:9.5px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:8px 12px;text-align:left;}
+.sub-table td{padding:8px 12px;border-bottom:1px solid var(--border);color:#3A5444;vertical-align:middle;}
+.sub-table tr:nth-child(even) td{background:#F0FAF4;}
+.sub-table tr:last-child td{border-bottom:none;}
+.sub-from{font-weight:800;color:var(--dark);}
+.sub-arrow{color:var(--teal);font-weight:900;text-align:center;width:24px;}
+
+/* ====== SHOPPING LIST ====== */
+.shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:8px;}
+.shop-col{padding:0 16px;}
+.shop-col:first-child{border-right:1px solid var(--border);padding-left:0;}
+.shop-col:last-child{padding-right:0;}
+.shop-week-tag{display:inline-block;background:linear-gradient(135deg,var(--g1),var(--teal));color:#fff;font-size:10px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;border-radius:20px;padding:5px 14px;margin-bottom:14px;}
+.shop-cat{font-size:10px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;color:var(--g1);margin:12px 0 6px;}
+.shop-cat:first-of-type{margin-top:0;}
+ul.shop-list{list-style:none;margin-bottom:2px;}
+ul.shop-list li{font-size:11.5px;color:#3A5444;padding:3px 0 3px 20px;position:relative;line-height:1.4;}
+ul.shop-list li::before{content:'☐';position:absolute;left:0;color:var(--teal);font-weight:700;}
+
+/* ====== FOOTER ====== */
+.pf{margin-top:auto;padding-top:12px;border-top:2px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.pf span{font-size:11px;color:var(--muted2);font-weight:600;}
+.pf-brand{font-size:11px;font-weight:900;color:var(--g1);}
+
+/* ====== CTA PAGE ====== */
+.cta-page{background:linear-gradient(155deg,var(--dark2),var(--dark3));justify-content:center;align-items:center;padding:64px 60px;text-align:center;}
+.cta-page h2{font-size:40px;font-weight:900;color:#fff;line-height:1.1;margin-bottom:16px;}
+.cta-page h2 em{font-style:normal;color:var(--teal2);}
+.cta-page p{font-size:15px;color:rgba(255,255,255,0.72);line-height:1.7;max-width:480px;margin:0 auto 24px;}
+.cta-icon{font-size:72px;margin-bottom:20px;}
+.cta-legal{font-size:11px;color:rgba(255,255,255,0.32);margin-top:20px;}
+
+/* ====== PRINT ====== */
+@page{size:A4;margin:0;}
+@media print{
+  body{background:#fff;padding:0;gap:0;}
+  .page{box-shadow:none;}
+  *,*::before,*::after{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  html,body{margin:0!important;padding:0!important;}
+  .page{width:210mm!important;min-height:0!important;height:297mm!important;max-height:297mm!important;margin:0!important;box-sizing:border-box!important;overflow:hidden!important;page-break-after:always!important;break-after:page!important;position:relative!important;display:flex!important;}
+  .page:last-of-type{page-break-after:avoid!important;break-after:avoid!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- P1: CAPA -->
+<div class="page cover">
+  <div class="photo-full">
+    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=900&h=1200&fit=crop&auto=format&sat=20" alt="Alimentação saudável">
+  </div>
+  <div class="photo-overlay" style="background:linear-gradient(175deg,rgba(7,22,13,0.1) 0%,rgba(7,22,13,0.55) 42%,rgba(7,22,13,0.97) 100%);"></div>
+  <div class="cover-pills">
+    <div class="cover-pill">📅 Complemento Exclusivo</div>
+    <div class="cover-pill">🌿 Para Usuárias de GLP-1</div>
+  </div>
+  <div class="cover-badge">
+    <span>dias de</span>
+    <strong>30</strong>
+    <span>refeições</span>
+  </div>
+  <div class="cover-body">
+    <div class="cover-tag">🥗 Semaglutida · Ozempic · Mounjaro · Wegovy</div>
+    <h1>Cardápio<br><em>30 Dias</em><br>Anti-Enjoo</h1>
+    <p class="cover-sub">30 dias de refeições planejadas para quem está em tratamento com GLP-1. Sem improvisar. Sem pensar. Só abrir e seguir.</p>
+    <div class="cover-divider"></div>
+    <div class="cover-author">
+      <div class="cover-avatar">🌿</div>
+      <div>
+        <div class="cover-author-name">César Carvalho</div>
+        <div class="cover-author-sub">Nutrir Sem Enjoar · Edição 2025</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- P2: COMO USAR + REGRAS -->
+<div class="page cp">
+  <div class="ph"><div class="ph-l"><div class="ph-dot"></div><h2>Como Usar Este Cardápio</h2></div><span class="ph-r">Nutrir Sem Enjoar</span></div>
+
+  <div class="photo-strip h-sm">
+    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&h=200&fit=crop&auto=format" alt="Refeição saudável">
+  </div>
+
+  <p class="body">Este cardápio foi criado especificamente para mulheres em tratamento com GLP-1. Cada refeição respeita as características do medicamento: <strong>apetite reduzido, digestão mais lenta e tendência ao enjoo.</strong> Siga semana por semana — a progressão é intencional.</p>
+
+  <div class="sec-title">⚠️ Regras de Ouro do Tratamento</div>
+
+  <div class="g2">
+    <div class="card card-green"><h4>🍽️ Porções pequenas</h4><p>A semaglutida retarda o esvaziamento gástrico. Comer demais causa enjoo. Mastigue devagar, prato menor.</p></div>
+    <div class="card card-red"><h4>🚫 Evite fritos e gordurosos</h4><p>Frituras pioram significativamente o enjoo. Prefira grelhados, cozidos no vapor ou assados com pouco azeite.</p></div>
+    <div class="card card-teal"><h4>💧 Água entre refeições</h4><p>Não durante as refeições. Líquido junto à comida ocupa espaço e reduz a quantidade que você consegue comer.</p></div>
+    <div class="card card-amber"><h4>⏰ Não pule refeições</h4><p>Mesmo sem fome, coma algo pequeno. Jejum prolongado piora tontura e fraqueza durante o tratamento.</p></div>
+    <div class="card card-orange"><h4>🌡️ Temperatura amena</h4><p>Alimentos muito quentes ou gelados causam mais desconforto. Prefira temperatura ambiente ou levemente morno.</p></div>
+    <div class="card card-green"><h4>🫚 Azeite frio sobre o prato</h4><p>Use azeite de oliva frio (não na frigideira). É a gordura que o estômago tolera melhor durante o tratamento.</p></div>
+  </div>
+
+  <div class="callout callout-teal">
+    <p><strong>📋 Legenda:</strong> ☀️ Café da Manhã · 🌿 Almoço · 🍃 Lanche da Tarde · 🌙 Jantar. Para dias com enjoo intenso, use o <strong>Protocolo Dias Difíceis</strong> na última página deste guia.</p>
+  </div>
+
+  <div class="pf"><span>Cardápio 30 Dias Anti-Enjoo © 2025</span><span class="pf-brand">Nutrir Sem Enjoar</span></div>
+</div>
+
+<!-- P3: SEMANA 1 (DIAS 1-7) -->
+<div class="page cp">
+  <div class="ph"><div class="ph-l"><div class="ph-dot"></div><h2>Semana 1 — Dias 1 a 7</h2></div><span class="ph-r">Nutrir Sem Enjoar</span></div>
+
+  <div class="week-banner">
+    <div class="week-banner-inner">
+      <span class="week-num">Semana 1</span>
+      <div class="week-info"><h3>Adaptação — A Semana Mais Importante</h3><p>Alimentos fáceis de digerir · Texturas macias · Sabores neutros · Porções mínimas</p></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 1</span><span class="day-t">Começando com calma</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Vitamina de banana com aveia</div><div class="md">1 banana + 3 col. aveia + 150ml leite morno</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Caldo de frango com batata</div><div class="md">200ml caldo + batata + cenoura + frango desfiado</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Maçã cozida com canela</div><div class="md">1 maçã cozida — mais fácil que crua</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Omelete leve com ricota</div><div class="md">2 ovos mexidos + 2 col. ricota + 1 torrada</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 2</span><span class="day-t">Introduzindo proteína sólida</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Iogurte grego com mel</div><div class="md">120g iogurte + 1 col. mel + 1 bolacha</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango + arroz + abobrinha</div><div class="md">100g frango grelhado + 3 col. arroz + abobrinha cozida</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Chá de gengibre com mel</div><div class="md">Chá morno + mel + 2 torradas (anti-enjoo natural)</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Sopa de mandioquinha</div><div class="md">200ml creme de mandioquinha + frango desfiado</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 3</span><span class="day-t">Variedade suave</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Mingau de aveia com maçã</div><div class="md">4 col. aveia cozida + maçã ralada + canela</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Tilápia no vapor + batata-doce</div><div class="md">100g tilápia + 1 batata-doce + cenoura cozida</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Banana amassada com mel</div><div class="md">1 banana amassada + 1 col. mel</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Ovos mexidos com cottage</div><div class="md">2 ovos + 2 col. cottage + sal + 1 torrada</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 4</span><span class="day-t">Mantendo leveza</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Vitamina de mamão</div><div class="md">2 fatias mamão + 150ml leite + 1 col. mel</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango desfiado + arroz + chuchu</div><div class="md">80g frango cozido + 3 col. arroz + chuchu cozido</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Iogurte grego puro</div><div class="md">80g iogurte grego natural</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Sopa de legumes com arroz</div><div class="md">Caldo de legumes + cenoura + batata + 2 col. arroz</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 5</span><span class="day-t">Fortalecendo a proteína</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Pão integral com ricota</div><div class="md">1 fatia pão + 2 col. ricota + 1 col. mel + chá</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango + mandioquinha + vagem</div><div class="md">100g frango + 1 mandioquinha amassada + vagem cozida</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">1 pera madura</div><div class="md">Pera bem madura — mais fácil de digerir</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Omelete de claras com espinafre</div><div class="md">3 claras + espinafre refogado + sal + torrada</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 6</span><span class="day-t">Introduzindo granola</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Iogurte grego com granola</div><div class="md">120g iogurte + 2 col. granola + banana fatiada</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Tilápia + arroz + cenoura</div><div class="md">100g tilápia cozida + 3 col. arroz + cenoura em rodelas</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Chá de camomila + bolacha</div><div class="md">Camomila morna + 2 bolachas de arroz</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Frango grelhado + purê</div><div class="md">80g frango + purê de batata-doce (1 unidade cozida)</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 7</span><span class="day-t">Fechando a primeira semana</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Vitamina de aveia e banana</div><div class="md">3 col. aveia + 1 banana + mel + 150ml água</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Caldo de feijão + arroz + frango</div><div class="md">Caldo coado + 3 col. arroz + frango desfiado</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Maçã cozida com canela</div><div class="md">Maçã cortada + 5 min de cozimento + canela</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Ovos cozidos com ricota</div><div class="md">2 ovos cozidos + 2 col. ricota + 1 torrada integral</div></div>
+    </div>
+  </div>
+
+  <div class="pf"><span>Cardápio 30 Dias Anti-Enjoo © 2025</span><span class="pf-brand">Nutrir Sem Enjoar</span></div>
+</div>
+
+<!-- P4: SEMANA 2 (DIAS 8-14) -->
+<div class="page cp">
+  <div class="ph"><div class="ph-l"><div class="ph-dot"></div><h2>Semana 2 — Dias 8 a 14</h2></div><span class="ph-r">Nutrir Sem Enjoar</span></div>
+
+  <div class="week-banner">
+    <div class="week-banner-inner" style="background:linear-gradient(135deg,#0FA858,#00BFA5);">
+      <span class="week-num">Semana 2</span>
+      <div class="week-info"><h3>Tolerância — Mais Variedade, Mesmo Cuidado</h3><p>Ampliando proteína e vegetais · Atum e quinoa entram · Mantendo cuidado com digestão</p></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 8</span><span class="day-t">Novidades na panela</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Panqueca de aveia e banana</div><div class="md">1 banana + 2 col. aveia + 1 ovo. Sem açúcar</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango + arroz integral + brócolis</div><div class="md">120g frango + 4 col. arroz integral + brócolis bem cozido</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Vitamina de morango</div><div class="md">6 morangos + 100g iogurte + 1 col. mel</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Sopa de lentilha</div><div class="md">Lentilha + cenoura + batata + caldo de legumes</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 9</span><span class="day-t">Atum entra no cardápio</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Iogurte com frutas vermelhas</div><div class="md">120g iogurte + morango + mirtilo + mel</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Atum + batata + cenoura</div><div class="md">1 lata atum em água + 1 batata cozida + cenoura</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Banana + 2 nozes</div><div class="md">1 banana + 2 nozes (gordura boa e saciedade)</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Frango com legumes no vapor</div><div class="md">100g frango + abobrinha + cenoura + vagem. Azeite</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 10</span><span class="day-t">Tapioca na manhã</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Tapioca com ovo e queijo</div><div class="md">2 tapiocas + ovo mexido + queijo branco + chá</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Peixe assado + arroz + abobrinha</div><div class="md">120g tilápia assada + 4 col. arroz + abobrinha grelhada</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Vitamina de banana com aveia</div><div class="md">1 banana + 2 col. aveia + 150ml leite</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Omelete com frango e queijo</div><div class="md">2 ovos + frango desfiado (50g) + queijo branco</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 11</span><span class="day-t">Molho de tomate suave</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Mingau de aveia com canela</div><div class="md">4 col. aveia + 200ml leite + 1 banana + canela</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango ao molho de tomate</div><div class="md">100g frango + 3 col. molho tomate (sem pimenta) + 4 col. arroz</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Iogurte grego com mel</div><div class="md">120g iogurte + 1 col. mel</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Sopa de abóbora com frango</div><div class="md">200ml creme de abóbora + 50g frango desfiado</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 12</span><span class="day-t">Pasta de atum no café</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Pão com pasta de atum</div><div class="md">1 fatia pão + atum + ricota + limão (misturar)</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Tilápia + arroz integral + vagem</div><div class="md">120g tilápia grelhada + 4 col. arroz integral + vagem</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Banana com pasta de amendoim</div><div class="md">1 banana + 1 col. pasta de amendoim integral</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Frango + purê de mandioquinha</div><div class="md">80g frango grelhado + mandioquinha cozida amassada</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 13</span><span class="day-t">Equilíbrio suave</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Vitamina de mamão</div><div class="md">2 fatias mamão + 150ml leite + mel + 1 torrada</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango ao limão + batata-doce</div><div class="md">120g frango com limão e alho + batata-doce assada</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Chá de gengibre + bolachas</div><div class="md">Chá morno + 2 bolachas de arroz</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Ovos mexidos com tomate</div><div class="md">2 ovos + tomate picado + azeite + sal + torrada</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 14</span><span class="day-t">Fechando 2 semanas</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Iogurte + granola + morango</div><div class="md">120g iogurte + 2 col. granola + morangos + mel</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango + arroz + feijão + abobrinha</div><div class="md">120g frango + 4 col. arroz + 2 col. feijão + abobrinha</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Maçã + 2 nozes</div><div class="md">1 maçã cortada + 2 nozes</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Sopa de frango com macarrão</div><div class="md">Caldo de frango + 50g macarrão cabelo de anjo + legumes</div></div>
+    </div>
+  </div>
+
+  <div class="pf"><span>Cardápio 30 Dias Anti-Enjoo © 2025</span><span class="pf-brand">Nutrir Sem Enjoar</span></div>
+</div>
+
+<!-- P5: SEMANA 3 (DIAS 15-21) -->
+<div class="page cp">
+  <div class="ph"><div class="ph-l"><div class="ph-dot"></div><h2>Semana 3 — Dias 15 a 21</h2></div><span class="ph-r">Nutrir Sem Enjoar</span></div>
+
+  <div class="week-banner">
+    <div class="week-banner-inner" style="background:linear-gradient(135deg,#00796B,#00BFA5);">
+      <span class="week-num">Semana 3</span>
+      <div class="week-info"><h3>Equilíbrio — Comendo com Mais Normalidade</h3><p>Mais sabor e variedade · Saladas entram · Carne magra · Mantendo os cuidados</p></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 15</span><span class="day-t">Salada entra no cardápio</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Omelete de claras + torrada</div><div class="md">3 claras mexidas + sal + 1 torrada + 1 fruta</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango + arroz + folhas</div><div class="md">130g frango + 4 col. arroz integral + alface + rúcula</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Iogurte grego com mel</div><div class="md">120g iogurte + 1 col. mel</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Peixe grelhado + legumes</div><div class="md">120g tilápia + abobrinha + cenoura + vagem no vapor</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 16</span><span class="day-t">Carne magra pela 1ª vez</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Panqueca de banana</div><div class="md">1 banana + 2 col. aveia + 1 ovo + mel</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Carne moída + arroz + batata</div><div class="md">100g carne moída magra + 4 col. arroz + 1 batata</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Vitamina de morango</div><div class="md">6 morangos + 100g iogurte + mel</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Frango ao alho + batata-doce</div><div class="md">100g frango grelhado com alho + purê batata-doce</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 17</span><span class="day-t">Quinoa entra</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Tapioca com ovo e queijo</div><div class="md">2 tapiocas + ovo mexido + queijo branco + chá</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Atum + quinoa + legumes</div><div class="md">1 lata atum + 4 col. quinoa + cenoura + vagem</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Banana + pasta de amendoim</div><div class="md">1 banana + 1 col. pasta amendoim integral</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Sopa de lentilha com frango</div><div class="md">Lentilha + frango desfiado + cenoura + caldo</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 18</span><span class="day-t">Dia de iogurte turbinado</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Iogurte + frutas + granola</div><div class="md">120g iogurte + frutas variadas + 3 col. granola + mel</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango + quinoa + brócolis</div><div class="md">130g frango + 4 col. quinoa + brócolis bem cozido</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Vitamina de banana com aveia</div><div class="md">1 banana + 2 col. aveia + 150ml leite + mel</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Omelete com espinafre e tomate</div><div class="md">3 ovos + espinafre refogado + tomate picado + azeite</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 19</span><span class="day-t">Abacate no café</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Pão com abacate</div><div class="md">1 fatia pão + 2 col. abacate amassado + sal + limão</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Tilápia com ervas + arroz</div><div class="md">120g tilápia (alecrim + tomilho) + 4 col. arroz + abobrinha</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Iogurte grego com mel</div><div class="md">120g iogurte + mel</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Frango + macarrão de arroz</div><div class="md">Frango desfiado + 60g macarrão de arroz + azeite + sal</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 20</span><span class="day-t">Beterraba cozida</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Vitamina de banana com aveia</div><div class="md">1 banana + 2 col. aveia + 150ml leite + mel</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Carne moída + arroz + feijão</div><div class="md">100g carne magra + 4 col. arroz + feijão + cenoura</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Maçã + 2 nozes</div><div class="md">1 maçã + 2 nozes</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Peixe ao limão + batata-doce</div><div class="md">120g tilápia ao limão + batata-doce assada em fatias</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 21</span><span class="day-t">3 semanas completas! 🎉</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Iogurte + granola + banana</div><div class="md">120g iogurte + 3 col. granola + banana fatiada + mel</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango + arroz + salada cozida</div><div class="md">130g frango + 4 col. arroz + cenoura + beterraba cozidas</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Vitamina de mamão</div><div class="md">2 fatias mamão + 150ml leite + mel</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Sopa de legumes com macarrão</div><div class="md">Caldo + frango desfiado + 40g macarrão cabelo de anjo</div></div>
+    </div>
+  </div>
+
+  <div class="pf"><span>Cardápio 30 Dias Anti-Enjoo © 2025</span><span class="pf-brand">Nutrir Sem Enjoar</span></div>
+</div>
+
+<!-- P6: SEMANA 4 (DIAS 22-30) -->
+<div class="page cp">
+  <div class="ph"><div class="ph-l"><div class="ph-dot"></div><h2>Semana 4 — Dias 22 a 30</h2></div><span class="ph-r">Nutrir Sem Enjoar</span></div>
+
+  <div class="week-banner">
+    <div class="week-banner-inner" style="background:linear-gradient(135deg,#1B5E20,#2E7D32);">
+      <span class="week-num">Semana 4</span>
+      <div class="week-info"><h3>Manutenção — Seu Novo Normal</h3><p>Consolidando hábitos para a vida toda · Parabéns por chegar até aqui!</p></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 22</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Omelete + presunto magro</div><div class="md">2 ovos + 1 fatia presunto sem gordura + 1 torrada</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango + arroz + feijão + salada</div><div class="md">150g frango + 4 col. arroz + feijão + folhas com azeite</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Iogurte + frutas vermelhas</div><div class="md">120g iogurte + frutas vermelhas variadas</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Peixe + legumes assados</div><div class="md">130g peixe + abobrinha + pimentão + tomate no forno</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 23</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Vitamina de banana com aveia</div><div class="md">1 banana + 2 col. aveia + 150ml leite + mel</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Carne magra + arroz + mandioquinha</div><div class="md">120g carne grelhada + 4 col. arroz + mandioquinha cozida</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Banana + 2 nozes</div><div class="md">1 banana + 2 nozes</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Frango ao creme de ricota</div><div class="md">100g frango + creme de ricota (2 col.) + batata-doce assada</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 24</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Tapioca com ovo e queijo</div><div class="md">2 tapiocas + ovo mexido + queijo branco + chá</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Atum + quinoa + legumes</div><div class="md">1 lata atum + 4 col. quinoa + cenoura + vagem</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Iogurte + granola + mel</div><div class="md">120g iogurte + 2 col. granola + mel</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Sopa de frango com batata</div><div class="md">Caldo de frango + batata + cenoura + frango desfiado</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 25</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Pão com pasta de amendoim</div><div class="md">1 fatia pão + 1 col. pasta de amendoim + mel + 1 fruta</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango + arroz + feijão</div><div class="md">130g frango + 4 col. arroz + feijão + abobrinha grelhada</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Vitamina de morango</div><div class="md">6 morangos + 100g iogurte + mel</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Omelete com tomate seco</div><div class="md">3 claras + 2 tomates secos + azeite + sal + torrada</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 26</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Iogurte + granola + banana</div><div class="md">120g iogurte + 3 col. granola + banana fatiada + mel</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Peixe assado + arroz + brócolis</div><div class="md">130g peixe com ervas + 4 col. arroz integral + brócolis</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Maçã + 2 nozes</div><div class="md">1 maçã + 2 nozes</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Frango + macarrão + molho</div><div class="md">Frango desfiado + molho tomate caseiro + 60g macarrão arroz</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 27</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Panqueca de aveia e banana</div><div class="md">1 banana + 2 col. aveia + 1 ovo + mel por cima</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Carne moída + arroz + feijão</div><div class="md">100g carne moída + 4 col. arroz + feijão + cenoura</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Vitamina de banana</div><div class="md">1 banana + 2 col. aveia + 150ml leite</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Tilápia + salada cozida</div><div class="md">120g tilápia + cenoura + beterraba cozidas + batata-doce</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 28</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Omelete com queijo + torrada</div><div class="md">2 ovos + tomate picado + queijo branco + 1 torrada</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango + quinoa + vagem</div><div class="md">130g frango + 4 col. quinoa + vagem + cenoura. Azeite</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Iogurte + frutas da estação</div><div class="md">120g iogurte + frutas da estação + mel</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Sopa de mandioquinha</div><div class="md">Creme de mandioquinha + frango desfiado + azeite</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-hd"><span class="day-n">DIA 29</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Vitamina de mamão + torrada</div><div class="md">2 fatias mamão + 150ml leite + mel + 1 torrada</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango ao limão + arroz integral</div><div class="md">130g frango com limão e alho + 4 col. arroz + abobrinha</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Banana + pasta de amendoim</div><div class="md">1 banana + 1 col. pasta de amendoim integral</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Omelete de ovos com espinafre</div><div class="md">3 ovos + espinafre refogado + azeite + sal + torrada</div></div>
+    </div>
+  </div>
+
+  <div class="day-card" style="border:2px solid rgba(0,191,165,0.4);">
+    <div class="day-hd" style="background:linear-gradient(135deg,rgba(0,191,165,0.15),rgba(10,122,64,0.1));"><span class="day-n" style="background:linear-gradient(135deg,#00796B,#00BFA5);">DIA 30</span><span class="day-t">🎉 Parabéns! Você chegou lá!</span></div>
+    <div class="meals-row">
+      <div class="meal-c"><div class="ml">☀️ Café</div><div class="mn">Iogurte + granola + morango</div><div class="md">120g iogurte + 3 col. granola + morangos + mel</div></div>
+      <div class="meal-c"><div class="ml">🌿 Almoço</div><div class="mn">Frango assado + arroz + salada</div><div class="md">150g frango assado + 4 col. arroz + feijão + folhas</div></div>
+      <div class="meal-c"><div class="ml">🍃 Lanche</div><div class="mn">Vitamina de banana com aveia</div><div class="md">1 banana + 2 col. aveia + 150ml leite + mel</div></div>
+      <div class="meal-c"><div class="ml">🌙 Jantar</div><div class="mn">Peixe grelhado + legumes</div><div class="md">130g peixe + legumes variados no vapor + azeite + ervas</div></div>
+    </div>
+  </div>
+
+  <div class="pf"><span>Cardápio 30 Dias Anti-Enjoo © 2025</span><span class="pf-brand">Nutrir Sem Enjoar</span></div>
+</div>
+
+<!-- P7: SUBSTITUIÇÕES + PROTOCOLO -->
+<div class="page cp">
+  <div class="ph"><div class="ph-l"><div class="ph-dot"></div><h2>Lista de Substituições</h2></div><span class="ph-r">Nutrir Sem Enjoar</span></div>
+
+  <p class="body">Não encontrou o ingrediente ou não gostou? Use a alternativa abaixo — o valor nutricional é equivalente.</p>
+
+  <table class="sub-table">
+    <thead><tr><th>Se não tiver ou não gostar de…</th><th style="width:28px;text-align:center;">→</th><th>Use no lugar</th></tr></thead>
+    <tbody>
+      <tr><td class="sub-from">Frango</td><td class="sub-arrow">→</td><td>Tilápia, atum em água, ovos inteiros, tofu</td></tr>
+      <tr><td class="sub-from">Arroz branco</td><td class="sub-arrow">→</td><td>Arroz integral, macarrão de arroz, quinoa, polenta cremosa</td></tr>
+      <tr><td class="sub-from">Batata comum</td><td class="sub-arrow">→</td><td>Batata-doce, mandioquinha, inhame, cará</td></tr>
+      <tr><td class="sub-from">Leite integral</td><td class="sub-arrow">→</td><td>Leite desnatado, bebida de aveia, bebida de amêndoa</td></tr>
+      <tr><td class="sub-from">Iogurte grego</td><td class="sub-arrow">→</td><td>Iogurte natural integral, coalhada seca, iogurte de coco</td></tr>
+      <tr><td class="sub-from">Abobrinha</td><td class="sub-arrow">→</td><td>Chuchu, pepino cozido, espinafre cozido, vagem</td></tr>
+      <tr><td class="sub-from">Brócolis</td><td class="sub-arrow">→</td><td>Vagem, espinafre cozido, couve cozida, aspargos</td></tr>
+      <tr><td class="sub-from">Tilápia / peixe branco</td><td class="sub-arrow">→</td><td>Merluza, pescada, linguado (evite peixes muito gordurosos)</td></tr>
+      <tr><td class="sub-from">Ricota</td><td class="sub-arrow">→</td><td>Cottage, queijo branco magro, iogurte grego espesso</td></tr>
+      <tr><td class="sub-from">Morango</td><td class="sub-arrow">→</td><td>Mirtilo, framboesa, amora, banana, mamão</td></tr>
+    </tbody>
+  </table>
+
+  <div class="ph" style="margin-top:8px;"><div class="ph-l"><div class="ph-dot" style="background:linear-gradient(135deg,#E53935,#F97316);"></div><h2>Protocolo para os Dias Difíceis</h2></div></div>
+
+  <div class="callout callout-red" style="margin-bottom:10px;">
+    <p><strong>🤢 Quando usar:</strong> Nos dias em que o enjoo está intenso e você quase não consegue colocar nada na boca. Priorize estes itens — é o mínimo para não ficar sem nutrição.</p>
+  </div>
+
+  <div class="g2" style="margin-bottom:10px;">
+    <div>
+      <p style="font-size:9.5px;font-weight:900;color:var(--g1);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;">✅ O que priorizar</p>
+      <ul class="ck">
+        <li>Chá de gengibre morno com mel — anti-enjoo natural</li>
+        <li>Água em temperatura ambiente</li>
+        <li>Torradas secas — toleradas com estômago sensível</li>
+        <li>Banana amassada — nutritiva e suave</li>
+        <li>Iogurte grego em temperatura ambiente</li>
+        <li>Água de coco (se tolerar)</li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-size:9.5px;font-weight:900;color:var(--red);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;">🚫 O que evitar</p>
+      <ul class="xk">
+        <li>Alimentos com cheiro forte (ovos, peixe, alho)</li>
+        <li>Comidas quentes — vapor intensifica o enjoo</li>
+        <li>Frituras e alimentos gordurosos</li>
+        <li>Bebidas gaseificadas</li>
+        <li>Porções grandes — coma pouco de hora em hora</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card card-amber">
+    <h4>🍽️ Refeição mínima para o dia difícil</h4>
+    <p><strong>Café:</strong> 1 torrada + chá de gengibre morno · <strong>Almoço:</strong> banana amassada + 1 col. mel · <strong>Tarde:</strong> 80g iogurte grego em temperatura ambiente · <strong>Jantar:</strong> caldo de frango morno + 1 torrada</p>
+  </div>
+
+  <div class="pf"><span>Cardápio 30 Dias Anti-Enjoo © 2025</span><span class="pf-brand">Nutrir Sem Enjoar</span></div>
+</div>
+
+<!-- P8: LISTAS DE COMPRAS — SEMANAS 1 E 2 -->
+<div class="page cp">
+  <div class="ph"><div class="ph-l"><div class="ph-dot"></div><h2>Listas de Compras — Bônus Exclusivo</h2></div><span class="ph-r">Nutrir Sem Enjoar</span></div>
+
+  <p class="body">Uma lista pronta para cada semana — bate exatamente com os ingredientes do cardápio daquele período. Leve essa página direto pro mercado, sem precisar conferir receita por receita.</p>
+
+  <div class="shop-grid">
+    <div class="shop-col">
+      <div class="shop-week-tag">Semana 1 · Dias 1-7</div>
+
+      <div class="shop-cat">🍗 Proteínas</div>
+      <ul class="shop-list"><li>Frango (peito)</li><li>Tilápia (ou peixe branco)</li><li>Ovos</li><li>Ricota</li><li>Cottage</li></ul>
+
+      <div class="shop-cat">🌾 Carboidratos</div>
+      <ul class="shop-list"><li>Aveia em flocos</li><li>Arroz branco</li><li>Batata</li><li>Batata-doce</li><li>Mandioquinha</li><li>Pão integral</li><li>Torradas integrais</li><li>Bolacha de arroz</li></ul>
+
+      <div class="shop-cat">🥦 Vegetais</div>
+      <ul class="shop-list"><li>Cenoura</li><li>Abobrinha</li><li>Chuchu</li><li>Vagem</li><li>Espinafre</li></ul>
+
+      <div class="shop-cat">🍌 Frutas</div>
+      <ul class="shop-list"><li>Banana</li><li>Maçã</li><li>Pera</li><li>Mamão</li></ul>
+
+      <div class="shop-cat">🥛 Laticínios</div>
+      <ul class="shop-list"><li>Leite</li><li>Iogurte grego</li></ul>
+
+      <div class="shop-cat">🍯 Outros</div>
+      <ul class="shop-list"><li>Mel</li><li>Canela</li><li>Gengibre (chá)</li><li>Camomila (chá)</li><li>Caldo de frango caseiro/tablete</li><li>Feijão</li><li>Granola</li></ul>
+    </div>
+
+    <div class="shop-col">
+      <div class="shop-week-tag" style="background:linear-gradient(135deg,#0FA858,#00BFA5);">Semana 2 · Dias 8-14</div>
+
+      <div class="shop-cat">🍗 Proteínas</div>
+      <ul class="shop-list"><li>Frango (peito)</li><li>Tilápia</li><li>Atum em lata (2-3 latas)</li><li>Ovos</li><li>Queijo branco</li></ul>
+
+      <div class="shop-cat">🌾 Carboidratos</div>
+      <ul class="shop-list"><li>Aveia em flocos</li><li>Arroz integral</li><li>Tapioca (goma)</li><li>Macarrão cabelo de anjo</li><li>Pão</li><li>Batata</li><li>Mandioquinha</li></ul>
+
+      <div class="shop-cat">🥦 Vegetais</div>
+      <ul class="shop-list"><li>Brócolis</li><li>Abóbora</li><li>Abobrinha</li><li>Vagem</li><li>Tomate</li><li>Cenoura</li></ul>
+
+      <div class="shop-cat">🍓 Frutas</div>
+      <ul class="shop-list"><li>Banana</li><li>Morango</li><li>Mirtilo</li></ul>
+
+      <div class="shop-cat">🥛 Laticínios</div>
+      <ul class="shop-list"><li>Leite</li><li>Iogurte</li></ul>
+
+      <div class="shop-cat">🍯 Outros</div>
+      <ul class="shop-list"><li>Mel</li><li>Nozes</li><li>Pasta de amendoim integral</li><li>Lentilha</li><li>Limão</li><li>Azeite</li><li>Molho de tomate (sem pimenta)</li></ul>
+    </div>
+  </div>
+
+  <div class="pf"><span>Cardápio 30 Dias Anti-Enjoo © 2025</span><span class="pf-brand">Nutrir Sem Enjoar</span></div>
+</div>
+
+<!-- P9: LISTAS DE COMPRAS — SEMANAS 3 E 4 -->
+<div class="page cp">
+  <div class="ph"><div class="ph-l"><div class="ph-dot"></div><h2>Listas de Compras — Bônus Exclusivo</h2></div><span class="ph-r">Nutrir Sem Enjoar</span></div>
+
+  <div class="shop-grid">
+    <div class="shop-col">
+      <div class="shop-week-tag" style="background:linear-gradient(135deg,#00796B,#00BFA5);">Semana 3 · Dias 15-21</div>
+
+      <div class="shop-cat">🍗 Proteínas</div>
+      <ul class="shop-list"><li>Frango (peito)</li><li>Tilápia</li><li>Atum em lata</li><li>Carne moída magra</li><li>Ovos</li></ul>
+
+      <div class="shop-cat">🌾 Carboidratos</div>
+      <ul class="shop-list"><li>Tapioca (goma)</li><li>Quinoa</li><li>Arroz integral</li><li>Pão</li><li>Macarrão de arroz</li><li>Batata-doce</li></ul>
+
+      <div class="shop-cat">🥦 Vegetais</div>
+      <ul class="shop-list"><li>Alface</li><li>Rúcula</li><li>Abobrinha</li><li>Cenoura</li><li>Vagem</li><li>Brócolis</li><li>Beterraba</li><li>Tomate</li><li>Espinafre</li></ul>
+
+      <div class="shop-cat">🍓 Frutas</div>
+      <ul class="shop-list"><li>Banana</li><li>Morango</li><li>Maçã</li><li>Abacate</li><li>Mamão</li></ul>
+
+      <div class="shop-cat">🥛 Laticínios</div>
+      <ul class="shop-list"><li>Leite</li><li>Iogurte</li><li>Queijo branco</li></ul>
+
+      <div class="shop-cat">🍯 Outros</div>
+      <ul class="shop-list"><li>Mel</li><li>Alho</li><li>Ervas (alecrim, tomilho)</li><li>Limão</li><li>Azeite</li><li>Nozes</li><li>Pasta de amendoim</li><li>Granola</li></ul>
+    </div>
+
+    <div class="shop-col">
+      <div class="shop-week-tag" style="background:linear-gradient(135deg,#1B5E20,#2E7D32);">Semana 4 · Dias 22-30</div>
+
+      <div class="shop-cat">🍗 Proteínas</div>
+      <ul class="shop-list"><li>Frango (peito e assado)</li><li>Peixe branco</li><li>Carne magra</li><li>Presunto magro</li><li>Ovos</li></ul>
+
+      <div class="shop-cat">🌾 Carboidratos</div>
+      <ul class="shop-list"><li>Aveia em flocos</li><li>Arroz</li><li>Quinoa</li><li>Tapioca</li><li>Pão</li><li>Mandioquinha</li><li>Batata-doce</li><li>Macarrão de arroz</li></ul>
+
+      <div class="shop-cat">🥦 Vegetais</div>
+      <ul class="shop-list"><li>Pimentão</li><li>Tomate</li><li>Tomate seco</li><li>Abobrinha</li><li>Cenoura</li><li>Beterraba</li><li>Vagem</li><li>Folhas (alface/rúcula)</li><li>Espinafre</li></ul>
+
+      <div class="shop-cat">🍓 Frutas</div>
+      <ul class="shop-list"><li>Mamão</li><li>Banana</li><li>Morango</li><li>Maçã</li></ul>
+
+      <div class="shop-cat">🥛 Laticínios</div>
+      <ul class="shop-list"><li>Leite</li><li>Iogurte</li><li>Queijo branco</li></ul>
+
+      <div class="shop-cat">🍯 Outros</div>
+      <ul class="shop-list"><li>Mel</li><li>Feijão</li><li>Azeite</li><li>Alho</li><li>Limão</li><li>Pasta de amendoim</li><li>Granola</li><li>Ervas</li></ul>
+    </div>
+  </div>
+
+  <div class="pf"><span>Cardápio 30 Dias Anti-Enjoo © 2025</span><span class="pf-brand">Nutrir Sem Enjoar</span></div>
+</div>
+
+<!-- P10: COMER FORA SEM CULPA — SITUAÇÕES -->
+<div class="page cp">
+  <div class="ph"><div class="ph-l"><div class="ph-dot" style="background:linear-gradient(135deg,#F97316,#FBBF24);"></div><h2>Comer Fora Sem Culpa</h2></div><span class="ph-r">Nutrir Sem Enjoar</span></div>
+
+  <div class="photo-strip h-sm">
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&h=200&fit=crop&auto=format" alt="Mesa de restaurante">
+  </div>
+
+  <p class="body">A vida social não para por causa do tratamento. Esse bônus te dá um plano pra cada situação — restaurante, festa, viagem — sem efeito rebote de enjoo e sem se sentir excluída da mesa.</p>
+
+  <div class="card card-green">
+    <h4>🍽️ Restaurante à la Carte</h4>
+    <p>Peça o prato pra dividir, ou pergunte se há porção menor. Priorize grelhados, assados ou no vapor — evite "à milanesa" e empanados. Peça os acompanhamentos (arroz, farofa) à parte: <strong>você decide a quantidade, não o prato pronto.</strong> Beba água só depois de terminar de comer, nunca durante.</p>
+  </div>
+
+  <div class="card card-teal">
+    <h4>🥘 Rodízio / Buffet Livre</h4>
+    <p>Faça uma "volta de reconhecimento" antes de se servir — escolha 2-3 itens, não monte um prato com tudo. Prefira carnes magras grelhadas (frango, peixe) a frituras e empanados. <strong>Pare no primeiro sinal de saciedade</strong> — com o tratamento, esse aviso chega bem antes do que você está acostumada.</p>
+  </div>
+
+  <div class="card card-orange">
+    <h4>🎉 Churrasco / Festa em Casa</h4>
+    <p>Coma algo leve antes de saír de casa (chá, fruta) — chegar com muita fome tende a piorar o enjoo na primeira garfada. Escolha cortes magros (frango, alcatra, picanha sem gordura aparente). <strong>Evite combinar carne + farofa + pão de alho no mesmo prato</strong> — escolha só 1 acompanhamento.</p>
+  </div>
+
+  <div class="card card-amber">
+    <h4>✈️ Viagem</h4>
+    <p>Leve sempre: bolachas de arroz, 1 fruta fácil de carregar, sachê de chá de gengibre. Em estradas e aeroportos, prefira grelhados simples a fast-food. <strong>Hidrate-se em pequenos sorvos ao longo do dia</strong>, nunca tudo de uma vez.</p>
+  </div>
+
+  <div class="pf"><span>Cardápio 30 Dias Anti-Enjoo © 2025</span><span class="pf-brand">Nutrir Sem Enjoar</span></div>
+</div>
+
+<!-- P11: COMER FORA SEM CULPA — SCRIPT E KIT -->
+<div class="page cp">
+  <div class="ph"><div class="ph-l"><div class="ph-dot" style="background:linear-gradient(135deg,#F97316,#FBBF24);"></div><h2>Comer Fora Sem Culpa — Na Prática</h2></div><span class="ph-r">Nutrir Sem Enjoar</span></div>
+
+  <div class="sec-title">💬 Frase Pronta Pra Usar</div>
+  <div class="callout callout-orange">
+    <p>Sempre que for pedir num restaurante ou numa casa de amigos, use: <strong>"Estou em tratamento médico e preciso de porções menores e pratos mais leves, sem fritura. Pode me ajudar?"</strong> Ninguém vai questionar — e você não precisa dar mais detalhes do que isso.</p>
+  </div>
+
+  <div class="sec-title" style="margin-top:18px;">🎒 Kit de Emergência (sempre na bolsa)</div>
+  <ul class="ck">
+    <li><strong>Bolachas de arroz ou torradas</strong> — para um enjoo súbito longe de casa</li>
+    <li><strong>1 fruta fácil de carregar</strong> — banana ou maçã</li>
+    <li><strong>Sachê de chá de gengibre</strong> — anti-enjoo natural, leva pra qualquer lugar</li>
+    <li><strong>Água</strong> — sempre por perto, em pequenos sorvos</li>
+    <li><strong>Orientação médica</strong> — leve sempre o antiácido recomendado pelo seu médico, se você usa algum</li>
+  </ul>
+
+  <div class="card card-green" style="margin-top:18px;">
+    <h4>🌿 Lembre-se: você não precisa se isolar</h4>
+    <p>O tratamento muda <strong>como</strong> você come — não <strong>onde</strong> você pode estar. Com esse roteiro, qualquer mesa, festa ou viagem é segura. Você não está fazendo regime, está se cuidando — e isso pode (e deve) continuar acontecendo no meio da vida social, não isolada dela.</p>
+  </div>
+
+  <div class="pf"><span>Cardápio 30 Dias Anti-Enjoo © 2025</span><span class="pf-brand">Nutrir Sem Enjoar</span></div>
+</div>
+
+<!-- P12: ENCERRAMENTO -->
+<div class="page cta-page">
+  <div class="cta-icon">🌿</div>
+  <h2>Você fez algo<br><em>muito importante</em><br>por você.</h2>
+  <p>Seguir um plano alimentar durante o tratamento com GLP-1 não é fácil. Mas você chegou até o final. Seu corpo agradece cada refeição que você cuidou de preparar com atenção.</p>
+  <p style="font-size:14px;color:rgba(255,255,255,0.5);margin-top:-16px;margin-bottom:28px;">Continue com os hábitos que você aprendeu. Eles são para a vida toda, não só para os 30 dias.</p>
+  <div class="callout callout-teal" style="text-align:left;max-width:520px;margin:0 auto 20px;">
+    <p><strong>📲 Seu Cardápio 30 Dias inclui:</strong><br>✓ 30 cardápios diários completos<br>✓ Lista de substituições · ✓ Protocolo dias difíceis<br>✓ 4 Listas de Compras semanais · ✓ Guia Comer Fora Sem Culpa</p>
+  </div>
+  <p class="cta-legal">Cardápio 30 Dias Anti-Enjoo · Nutrir Sem Enjoar · César Carvalho · 2025<br>Conteúdo informativo e educacional. Não substitui orientação médica ou nutricional.</p>
+</div>
+
+</body>
+</html>
