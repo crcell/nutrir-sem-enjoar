@@ -4,6 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oferta Especial — Cardápio 30 Dias Anti-Enjoo</title>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '795163796539514');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'Upsell Cardapio 30 Dias', value: 37, currency: 'BRL'});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=795163796539514&ev=PageView&noscript=1"/></noscript>
+
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -279,12 +297,12 @@ body{font-family:'Nunito',sans-serif;background:var(--dark);color:#fff;overflow-
   </div>
 
   <!-- CTA YES -->
-  <a href="https://pay.hotmart.com/SEU_UPSELL_PRODUTO_ID" class="cta-yes">
+  <a href="https://pay.hotmart.com/SEU_UPSELL_PRODUTO_ID" class="cta-yes" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Upsell Cardapio 30 Dias', value: 37, currency: 'BRL'})">
     ✅ SIM! Quero o Cardápio 30 Dias por R$37 →
   </a>
 
   <!-- CTA NO -->
-  <span class="cta-no" onclick="window.location.href='https://app.hotmart.com/product/member-area'">
+  <span class="cta-no" onclick="fbq('trackCustom', 'UpsellRecusado', {content_name: 'Upsell Cardapio 30 Dias'}); window.location.href='https://app.hotmart.com/product/member-area'">
     Não obrigado, prefiro montar meu próprio cardápio. Quero acessar apenas o que comprei.
   </span>
 
